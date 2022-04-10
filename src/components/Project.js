@@ -125,7 +125,7 @@ const Wrapper = styled.article`
       display: grid;
       position: relative;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(10, 15rem);
+      grid-template-rows: repeat(8, 15rem);
       padding-bottom: 0;
 
       .container-item {

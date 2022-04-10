@@ -38,11 +38,15 @@ const Wrapper = styled.footer`
     display: flex;
     justify-content: space-between;
 
-    .social-links {
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid #000;
-      }
+    .social-links a {
+      transition: var(--transition);
+      padding-bottom: 0.5rem;
+    }
+
+    .social-links a:hover,
+    a:focus {
+      box-shadow: var(--box-shadow);
+      color: steelblue;
     }
   }
 
@@ -53,7 +57,6 @@ const Wrapper = styled.footer`
 
     .gatsby {
       font-size: 1.8rem;
-      /* text-decoration: underline; */
     }
   }
 `

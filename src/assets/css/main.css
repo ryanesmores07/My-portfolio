@@ -29,6 +29,7 @@
   --ff-primary: "Oswald", sans-serif;
   --ff-secondary: "Roboto", sans-serif;
   --transition: all 0.3s linear;
+  --box-shadow: 0px 2px steelblue;
 }
 
 *,

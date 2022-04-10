@@ -139,6 +139,31 @@ const Wrapper = styled.main`
       }
     }
   }
+
+  @media (min-width: 1170px) {
+    .container {
+      h2 {
+      }
+
+      .name {
+      }
+      .header,
+      .web-dev {
+      }
+
+      .web-dev {
+      }
+
+      .introduction-1 {
+      }
+
+      .introduction-2 {
+      }
+
+      .read-more {
+      }
+    }
+  }
 `
 
 export default Hero
