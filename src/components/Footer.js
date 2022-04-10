@@ -6,30 +6,55 @@ import { Link } from "gatsby"
 const Footer = () => {
   return (
     <Wrapper>
-      {data.map((social, index) => {
-        const { id, text, url, icon } = social
-        return (
-          <main className="container">
-            <ul>
+      <main className="container">
+        {data.map((social, index) => {
+          const { id, text, url, icon } = social
+          return (
+            <ul className="social-links">
               <li>
                 <a href={url}>{text}</a>
               </li>
             </ul>
-          </main>
-        )
-      })}
+          )
+        })}
+      </main>
+      <div className="made-gatsby">
+        <a href="https://www.gatsbyjs.com/">
+          <h3 className="gatsby">Gatsby ❤️</h3>
+        </a>
+      </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.footer`
-  width: 100%;
+  a {
+    font-size: 2rem;
+  }
 
   .container {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+
+    .social-links {
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+
+  .made-gatsby {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+
+    .gatsby {
+      font-size: 1.8rem;
+      /* text-decoration: underline; */
+    }
   }
 `
 

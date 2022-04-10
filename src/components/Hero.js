@@ -6,18 +6,21 @@ const Hero = () => {
   return (
     <Wrapper>
       <main className="container">
-        <h2>👋 Hey, I'm Ryan Esmores</h2>
+        <h2 className="name">👋 Hey, I'm Ryan Esmores</h2>
         <h1 className="header">front-end</h1>
         <h1 className="web-dev">web developer</h1>
 
-        <h2>
-          I love making websites and expressing my self through design & code
+        <h2 className="introduction-1">
+          I love making websites and expressing myself through design & code
         </h2>
-        <h2 className="introduction">
+        <h2 className="introduction-2">
           I am a self-taught junior front-end developer based in Tokyo, Japan.
         </h2>
-        <Link>
-          <h2 style={{ textDecoration: "underline", color: "steelblue" }}>
+        <Link to="/">
+          <h2
+            className="read-more"
+            style={{ textDecoration: "underline", color: "steelblue" }}
+          >
             Read more about me here
           </h2>
         </Link>
@@ -28,13 +31,14 @@ const Hero = () => {
 
 const Wrapper = styled.main`
   width: 100%;
+  /* min-height: 100vh; */
 
   .container {
-    padding: 15vw;
+    padding: 5vh 15vw;
     display: flex;
     flex-direction: column;
+
     text-align: center;
-    margin: 0 auto;
 
     h1 {
       /* margin-bottom: 4rem; */
@@ -43,6 +47,12 @@ const Wrapper = styled.main`
     h2 {
       font-weight: 200;
       margin-bottom: 2rem;
+    }
+
+    .name {
+      /* margin-bottom: 4rem; */
+
+      font-weight: 300;
     }
 
     .header,
@@ -61,8 +71,72 @@ const Wrapper = styled.main`
       margin-bottom: 4rem;
     }
 
-    .introduction {
+    .introduction-2 {
       color: var(--clr-grey-5);
+      font-weight: 300;
+    }
+  }
+
+  @media (min-width: 450px) {
+    .container {
+      /* padding: 15vh 8vw; */
+
+      .name {
+        margin-bottom: 4rem;
+      }
+      .header,
+      .web-dev {
+        font-size: 14vw;
+        margin-bottom: 2rem;
+      }
+
+      .web-dev {
+        line-height: 12rem;
+        margin-bottom: 5rem;
+      }
+
+      .introduction-1 {
+        max-width: 40ch;
+        align-self: center;
+      }
+
+      .introduction-2 {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    min-height: 100vh;
+    .container {
+      padding: 10rem 3rem;
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .name {
+        font-size: 3.5rem;
+      }
+      .header,
+      .web-dev {
+        font-size: 19vw;
+        line-height: 15rem;
+      }
+
+      .web-dev {
+        margin-bottom: 8rem;
+      }
+
+      .introduction-1 {
+        font-size: 3rem;
+        max-width: 37ch;
+      }
+
+      .introduction-2 {
+      }
+
+      .read-more {
+      }
     }
   }
 `
