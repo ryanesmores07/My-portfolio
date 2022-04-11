@@ -14,7 +14,7 @@ const Hero = () => {
           I love making websites and expressing myself through design & code
         </h2>
         <h2 className="introduction-2">
-          I am a self-taught junior front-end developer based in Tokyo, Japan.
+          I am a front-end web developer based in Tokyo, Japan.
         </h2>
         <Link to="/">
           <h2
@@ -141,23 +141,33 @@ const Wrapper = styled.main`
   }
 
   @media (min-width: 1170px) {
+    /* min-height: 100vh; */
     .container {
+      padding: 10rem 3rem;
+      /* text-align: left; */
+      /* align-items: center; */
       h2 {
       }
 
       .name {
+        margin-bottom: 1rem;
       }
       .header,
       .web-dev {
+        line-height: 0.76;
+        font-size: 16vw;
       }
 
       .web-dev {
       }
 
       .introduction-1 {
+        line-height: 1.5;
+        margin-bottom: 5rem;
       }
 
       .introduction-2 {
+        margin-bottom: 5rem;
       }
 
       .read-more {

@@ -56,9 +56,11 @@ const Project = () => {
 
 const Wrapper = styled.article`
   width: 100%;
+  padding-bottom: 15rem;
 
   .container {
     padding: 3rem;
+
     color: var(--clr-black);
     display: flex;
     width: 90%;
@@ -131,10 +133,15 @@ const Wrapper = styled.article`
       .container-item {
         width: 90%;
       }
-    }
 
-    .description {
-      max-width: 30ch;
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .description {
+        max-width: 30ch;
+        font-size: 1.9rem;
+      }
     }
   }
 

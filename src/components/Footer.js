@@ -34,13 +34,14 @@ const Wrapper = styled.footer`
 
   .container {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
 
     .social-links a {
       transition: var(--transition);
       padding-bottom: 0.5rem;
+      color: var(--clr-black);
     }
 
     .social-links a:hover,
@@ -57,6 +58,24 @@ const Wrapper = styled.footer`
 
     .gatsby {
       font-size: 1.8rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    a {
+      font-size: 2.5rem;
+    }
+    .container {
+      width: 60%;
+    }
+  }
+
+  @media (min-width: 1170px) {
+    a {
+      font-size: 3rem;
+    }
+    .container {
+      width: 45%;
     }
   }
 `
