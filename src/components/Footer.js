@@ -34,7 +34,7 @@ const Wrapper = styled.footer`
 
   .container {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
 

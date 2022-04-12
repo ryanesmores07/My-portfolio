@@ -31,7 +31,7 @@ const Hero = () => {
 
 const Wrapper = styled.main`
   width: 100%;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 
   .container {
     padding: 5vh 15vw;
@@ -58,6 +58,7 @@ const Wrapper = styled.main`
     .header,
     .web-dev {
       font-size: 9rem;
+      /* font-size: clamp(9rem, 14vw, 19vw); */
       line-height: 8rem;
       font-weight: 700;
       letter-spacing: -3px;
@@ -79,14 +80,14 @@ const Wrapper = styled.main`
 
   @media (min-width: 450px) {
     .container {
-      /* padding: 15vh 8vw; */
+      padding: 15vh 8vw;
 
       .name {
         margin-bottom: 4rem;
       }
       .header,
       .web-dev {
-        font-size: 14vw;
+        font-size: 12rem;
         margin-bottom: 2rem;
       }
 
@@ -107,7 +108,7 @@ const Wrapper = styled.main`
   }
 
   @media (min-width: 768px) {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     .container {
       padding: 10rem 3rem;
       h2 {
@@ -119,7 +120,7 @@ const Wrapper = styled.main`
       }
       .header,
       .web-dev {
-        font-size: 19vw;
+        font-size: 17rem;
         line-height: 15rem;
       }
 
@@ -141,11 +142,9 @@ const Wrapper = styled.main`
   }
 
   @media (min-width: 1170px) {
-    /* min-height: 100vh; */
     .container {
-      padding: 10rem 3rem;
-      /* text-align: left; */
-      /* align-items: center; */
+      /* padding: 10rem 3rem; */
+
       h2 {
       }
 
@@ -154,8 +153,8 @@ const Wrapper = styled.main`
       }
       .header,
       .web-dev {
-        line-height: 0.76;
-        font-size: 16vw;
+        line-height: 0.8;
+        font-size: 20.5rem;
       }
 
       .web-dev {

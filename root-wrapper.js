@@ -3,10 +3,12 @@ import Layout from "./src/components/Layout"
 
 import { GatsbyProvide, GatsbyProvider } from "./src/context/context"
 
-export const wrapRootElement = ({ element }) => {
+export const wrapRootElement = ({ element, props }) => {
   return (
     <>
-      <GatsbyProvide>{element}</GatsbyProvide>
+      <GatsbyProvide>
+        <Layout {...props}>{element}</Layout>
+      </GatsbyProvide>
     </>
   )
 }
