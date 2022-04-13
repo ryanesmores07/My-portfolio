@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import socials from "../constants/socials"
+import { CgArrowsExpandUpRight } from "react-icons/cg"
 
 const Contact = () => {
   return (
@@ -27,7 +28,12 @@ const Contact = () => {
           {socials.map((social, index) => {
             return (
               <div className="social-container">
-                <a href="#">{social.text}</a>
+                <a href={social.url} className="flex-container">
+                  <div className="social-text">{social.text}</div>
+                  <CgArrowsExpandUpRight className="arrow-icon" />
+                </a>
+
+                <div className="line"></div>
               </div>
             )
           })}
@@ -62,10 +68,12 @@ const Wrapper = styled.header`
         font-size: 2rem;
         color: var(--clr-black);
         margin-bottom: 2rem;
+        font-family: var(--ff-primary);
     }
 
+    
     a { 
-        font-style: var(--ff-primary);
+        /* font-style: var(--ff-primary); */
         font-weight: 200;
     }
 
@@ -73,6 +81,49 @@ const Wrapper = styled.header`
         font-size: 2rem;
         margin-bottom: 10rem;
     }
+
+
+    .social-container{
+
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+
+         .social-text {
+        margin: 0 1rem;
+        }
+
+        .arrow-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+        }
+      }
+      
+      .flex-container:hover, .flex-container:focus {
+       
+        
+        .social-text {
+          transform: translateX(.3rem);
+          transition: all 0.1s linear;
+          color: steelblue;
+        }
+      }
+     
+
+     
+      
+      .line {
+      height: .1rem;
+      width: 100%;
+      background: var(--clr-black);
+      opacity: .2;
+      margin: .7rem 0;
+      
+      }
+    }
+    
 
     
 `
