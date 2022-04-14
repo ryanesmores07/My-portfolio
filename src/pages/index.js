@@ -3,9 +3,9 @@ import Layout from "../components/Layout"
 import { Hero, Project } from "../components"
 export default function Home() {
   return (
-    <Layout>
+    <div>
       <Hero />
       <Project />
-    </Layout>
+    </div>
   )
 }
