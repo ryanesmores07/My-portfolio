@@ -46,7 +46,7 @@ const Wrapper = styled.main`
 
     h2 {
       font-weight: 200;
-      margin-bottom: 2rem;
+      /* margin-bottom: 2rem; */
     }
 
     .name {
@@ -57,9 +57,9 @@ const Wrapper = styled.main`
 
     .header,
     .web-dev {
-      font-size: 9rem;
+      font-size: 7rem;
       /* font-size: clamp(9rem, 14vw, 19vw); */
-      line-height: 8rem;
+      line-height: 0.9;
       font-weight: 700;
       letter-spacing: -3px;
       color: var(--clr-white);
@@ -83,22 +83,24 @@ const Wrapper = styled.main`
       padding: 15vh 8vw;
 
       .name {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
       }
+
       .header,
       .web-dev {
-        font-size: 12rem;
+        font-size: 10rem;
         margin-bottom: 2rem;
       }
 
       .web-dev {
-        line-height: 12rem;
+        /* line-height: .; */
         margin-bottom: 5rem;
       }
 
       .introduction-1 {
         max-width: 40ch;
         align-self: center;
+        margin-bottom: 2rem;
       }
 
       .introduction-2 {
@@ -116,12 +118,12 @@ const Wrapper = styled.main`
       }
 
       .name {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
       }
       .header,
       .web-dev {
-        font-size: 17rem;
-        line-height: 15rem;
+        font-size: 14rem;
+        line-height: 0.8;
       }
 
       .web-dev {
@@ -130,7 +132,7 @@ const Wrapper = styled.main`
 
       .introduction-1 {
         font-size: 3rem;
-        max-width: 37ch;
+        max-width: 31ch;
       }
 
       .introduction-2 {
