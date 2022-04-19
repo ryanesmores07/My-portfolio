@@ -5,7 +5,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import links from "../constants/links"
 import { Link } from "gatsby"
 import { GatsbyContext } from "../context/context"
+
 import { IoReorderTwoOutline } from "react-icons/io5"
+import { Hamburger, Burger } from "../components"
 
 const Navbar = () => {
   const { isSidebarOpen, showSidebar } = useContext(GatsbyContext)
@@ -31,9 +33,14 @@ const Navbar = () => {
           })}
         </div>
         {!isSidebarOpen && (
-          <button className="toggle-btn" onClick={showSidebar}>
-            <IoReorderTwoOutline />
-          </button>
+          <div role="button" onClick={showSidebar}>
+            <Hamburger />
+            {/* <Burger /> */}
+          </div>
+
+          // <button className="toggle-btn" onClick={showSidebar}>
+          //   <IoReorderTwoOutline />
+          // </button>
         )}
       </nav>
     </Wrapper>

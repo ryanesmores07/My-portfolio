@@ -108,6 +108,7 @@ const Wrapper = styled.article`
           }
           .image {
             box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+            transition: all 0.1s ease-in-out;
           }
         }
       }

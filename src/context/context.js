@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 
-import links from "../constants/links"
+import data from "../constants/links"
 
 const GatsbyContext = React.createContext()
 
@@ -8,7 +8,7 @@ const GatsbyContext = React.createContext()
 
 const GatsbyProvide = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const [links, setLinks] = useState(links)
+  const [links, setLinks] = useState(data)
 
   const showSidebar = () => {
     setIsSidebarOpen(true)

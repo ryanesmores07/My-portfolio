@@ -3,19 +3,23 @@ import styled from "styled-components"
 import { MdClose } from "react-icons/md"
 import { GatsbyContext } from "../context/context"
 import { Link } from "gatsby"
+import { Hamburger, Burger } from "../components/"
 
 const Sidebar = () => {
   const { links, hideSidebar } = useContext(GatsbyContext)
+  console.log(links)
 
   return (
     <Wrapper>
       <div className="container">
-        <button onClick={hideSidebar}>
-          <MdClose className="icon" />
-        </button>
+        <div className="burger" role="button" onClick={hideSidebar}>
+          {/* <MdClose className="icon" /> */}
+          <Hamburger />
+          {/* <Burger /> */}
+        </div>
         <div className="links">
           {links.map((link, index) => {
-            const { url, text, icon } = link
+            const { url, text } = link
 
             return (
               <Link to={url} key={index} onClick={hideSidebar}>
@@ -51,7 +55,7 @@ const Wrapper = styled.aside`
     border-radius: var(--radius);
     position: relative;
     padding: 4rem 2rem 2rem 2rem;
-    button {
+    .burger {
       position: absolute;
       top: 1rem;
       right: 1rem;
