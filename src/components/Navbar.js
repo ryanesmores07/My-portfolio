@@ -21,7 +21,7 @@ const Navbar = () => {
             alt="logo"
           />
         </div>
-        <div className="nav-items">
+        {/* <div className="nav-items">
           {links.map((link, index) => {
             return (
               <ul>
@@ -31,7 +31,7 @@ const Navbar = () => {
               </ul>
             )
           })}
-        </div>
+        </div> */}
         {!isSidebarOpen && (
           <div role="button" onClick={showSidebar}>
             <Hamburger />

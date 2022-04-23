@@ -16,7 +16,7 @@ const Hero = () => {
         <h2 className="introduction-2">
           I am a front-end web developer based in Tokyo, Japan.
         </h2>
-        <Link to="/">
+        <Link to="/about">
           <h2
             className="read-more"
             style={{ textDecoration: "underline", color: "steelblue" }}
@@ -41,17 +41,13 @@ const Wrapper = styled.main`
     text-align: center;
 
     h1 {
-      /* margin-bottom: 4rem; */
     }
 
     h2 {
       font-weight: 200;
-      /* margin-bottom: 2rem; */
     }
 
     .name {
-      /* margin-bottom: 4rem; */
-
       font-weight: 300;
     }
 

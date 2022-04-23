@@ -7,15 +7,15 @@ const Contact = () => {
   return (
     <Wrapper>
       <section className="container">
+        <h2>Contact</h2>
         <div className="title">
-          <h2>Contact</h2>
           <h1>get in touch</h1>
         </div>
         <div className="content">
           <p>
             What is your challenge? I can help you with your website front-end
-            development needs and make it fully responsive and customized with
-            the design and style you like!
+            development needs and make it fully responsive with the design and
+            style you like!
           </p>
         </div>
         <div className="socials">
@@ -45,13 +45,16 @@ const Contact = () => {
 
 const Wrapper = styled.header`
   width: 100%;
+  
 
   .container {
-    padding: 3rem 5rem;
+    margin: 0 auto;
+    max-width: 80%;
+    /* padding: 0rem rem; */
 
     h1 {
         font-size: 5.5rem;
-        font-weight: 200;
+        font-weight: 300;
         letter-spacing: -2px;
         margin-bottom: 10rem;
     }
@@ -124,8 +127,49 @@ const Wrapper = styled.header`
       }
     }
     
+    @media (min-width: 450px) {
+      h1 {
+        font-size: 7rem;
+      }
+    }
 
-    
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 13rem;
+      }
+
+      p {
+        max-width: 46ch;
+      }
+    }
+
+    @media (min-width: 1170px) {
+      max-width: 95%;
+      h1 {
+        font-size: 17rem;
+      }
+
+      p {
+        margin: 0 auto;
+        /* width: 80%; */
+        max-width: 75ch;
+        padding: 0rem 8rem;
+        margin-bottom: 10rem;
+        font-size: 2.5rem;
+      }
+
+      .socials {
+        h3 {
+          font-size: 4rem;
+        }
+      }
+
+      .social-container {
+        a {
+          font-size: 2.5rem;
+        }
+      }
+    }
 `
 
 export default Contact

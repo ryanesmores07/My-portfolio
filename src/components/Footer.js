@@ -10,7 +10,7 @@ const Footer = () => {
         {data.map((social, index) => {
           const { id, text, url, icon } = social
           return (
-            <ul className="social-links">
+            <ul className="social-links" key={index}>
               <li>
                 <a href={url}>{text}</a>
               </li>
@@ -28,6 +28,7 @@ const Footer = () => {
 }
 
 const Wrapper = styled.footer`
+  padding-top: 5rem;
   a {
     font-size: 2rem;
   }

@@ -53,7 +53,11 @@ const Wrapper = styled.main`
     margin: 0 auto;
 
     .title {
-      margin: 0rem 0rem 5rem;
+      margin: 0rem 0rem 3rem;
+      h2 {
+        font-weight: 200;
+        font-size: 1.7rem;
+    }
     }
 
     .my-photo {

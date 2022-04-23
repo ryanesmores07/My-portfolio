@@ -36,16 +36,16 @@ const Project = () => {
             project
           return (
             <div className="container-item">
-              {/* <a href={`/projects/${slug}`} className="anker"> */}
-              <GatsbyImage
-                image={getImage(image)}
-                alt={title}
-                className="image"
-              />
+              <Link to={`/projects/${slug}`}>
+                <GatsbyImage
+                  image={getImage(image)}
+                  alt={title}
+                  className="image"
+                />
 
-              <h2 className="title">{title}</h2>
-              <h3 className="description">{description.description}</h3>
-              {/* </a> */}
+                <h2 className="title">{title}</h2>
+                <h3 className="description">{description.description}</h3>
+              </Link>
             </div>
           )
         })}
@@ -56,7 +56,10 @@ const Project = () => {
 
 const Wrapper = styled.article`
   width: 100%;
-  padding-bottom: 15rem;
+
+  a {
+    color: var(--clr-black);
+  }
 
   .container {
     padding: 3rem;
@@ -68,10 +71,10 @@ const Wrapper = styled.article`
     /* box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2); */
     border-radius: 2rem;
     flex-direction: column;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
 
     .container-item {
-      margin-bottom: 7rem;
+      margin-bottom: 5rem;
     }
   }
 
@@ -91,7 +94,7 @@ const Wrapper = styled.article`
   }
 
   .description {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
     font-weight: 200;
 
@@ -118,13 +121,17 @@ const Wrapper = styled.article`
       }
 
       .title {
-        font-size: 4rem;
+        font-size: 3rem;
+      }
+
+      .description {
       }
     }
   }
 
   @media (min-width: 768px) {
     .container {
+      max-width: 1400px;
       display: grid;
       position: relative;
       grid-template-columns: 1fr 1fr;
@@ -168,6 +175,16 @@ const Wrapper = styled.article`
 
   .container-item:nth-of-type(even) {
     justify-self: end;
+  }
+
+  @media (min-width: 1170px) {
+    .container {
+      width: 100%;
+
+      .container-item {
+        width: 85%;
+      }
+    }
   }
 `
 
