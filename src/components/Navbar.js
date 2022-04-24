@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 
 import { StaticImage } from "gatsby-plugin-image"
-import links from "../constants/links"
+
 import { Link } from "gatsby"
 import { GatsbyContext } from "../context/context"
 
@@ -15,11 +15,13 @@ const Navbar = () => {
     <Wrapper>
       <nav className="container">
         <div className="logo">
-          <StaticImage
-            className="logo"
-            src="../../static/LogoMakr.png"
-            alt="logo"
-          />
+          <Link to="/">
+            <StaticImage
+              className="logo"
+              src="../../static/LogoMakr.png"
+              alt="logo"
+            />
+          </Link>
         </div>
         {/* <div className="nav-items">
           {links.map((link, index) => {

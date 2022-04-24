@@ -31,7 +31,7 @@ const Hero = () => {
 
 const Wrapper = styled.main`
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 
   .container {
     padding: 5vh 15vw;

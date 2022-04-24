@@ -19,14 +19,17 @@ const ProjectTemplate = ({
 
         <div className="project-container">
           <GatsbyImage
+            className="image"
             image={getImage(datas.image.gatsbyImageData)}
             alt="project-photo"
           />
           <section className="content">
-            <h3>{title}</h3>
-            <p>{description.description}</p>
+            <h3 className="title">{title}</h3>
+            <p className="description">{description.description}</p>
             <div className="stack">
-              <span>{content.stack}</span>
+              {content.stack.map((item, index) => {
+                return <span>{item}</span>
+              })}
             </div>
             <div className="project-links">
               <a href={github}>
@@ -44,7 +47,7 @@ const ProjectTemplate = ({
 }
 
 const Wrapper = styled.main`
-  background-color: var(--clr-grey-9);
+  background-color: var(--clr-grey-10);
   .container {
     padding: 3rem;
     display: flex;
@@ -57,37 +60,130 @@ const Wrapper = styled.main`
     .project-title {
       h2 {
         font-weight: 400;
+        margin-bottom: 3rem;
       }
     }
 
     .project-container {
-      background-color: var(--clr-white);
+      /* background-color: var(--clr-white); */
       width: 80%;
       /* border: 1px solid black; */
 
+      .image {
+        box-shadow: var(--dark-shadow);
+      }
+
+      .image::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom right,
+          var(--clr-primary-5),
+          #222
+        );
+        opacity: 0.85;
+        transition: var(--transition);
+      }
+
+      .image:hover::after {
+        opacity: 0;
+      }
+
       .content {
         padding: 2rem 1rem;
-        h3 {
+        background-color: var(--clr-white);
+        box-shadow: var(--dark-shadow);
+        z-index: 10;
+
+        .title {
+          margin-bottom: 0.8rem;
           text-transform: uppercase;
           letter-spacing: 0.1rem;
-          margin-bottom: 0;
+          margin-bottom: 1rem;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        .description {
+          margin-bottom: 0.7rem;
         }
 
         a {
-          margin-right: 1rem;
-          font-size: 1.5rem;
+          margin-right: 0.5rem;
+          font-size: 1.3rem;
         }
 
-        .stack {
+        .stack span {
           display: inline-block;
-          font-size: 1.2rem;
+          font-size: 0.8rem;
           margin: 0 0 0.5rem;
-
+          margin-right: 1rem;
           padding: 0rem 0.5rem;
           letter-spacing: 0.1rem;
           text-transform: uppercase;
-          border-radius: 1.25px;
+          border-radius: 1px;
+
           background-color: var(--clr-grey-8);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      .project-container {
+        width: 100%;
+        display: grid;
+
+        grid-template-columns: repeat(12, 1fr);
+
+        .image {
+          grid-column: 2 / span 8;
+          grid-row: 1 / 1;
+        }
+
+        .content {
+          grid-column: 6 / -2;
+          grid-row: 1 / 1;
+          /* height: 20rem; */
+          align-self: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .title {
+            font-size: 2.2rem;
+          }
+          .description {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1170px) {
+    .container {
+      .project-container {
+        .content {
+          a {
+            font-size: 2rem;
+          }
+          .title {
+            font-size: 3rem;
+          }
+          .description {
+            font-size: 2rem;
+          }
+
+          .stack span {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+          }
         }
       }
     }
