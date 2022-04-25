@@ -5,6 +5,5 @@ import Hero from "./Hero"
 import Project from "./Project"
 import Hamburger from "./Hamburger"
 import Burger from "./Burger"
-import Navigation from "./Navigation"
 
-export { Footer, Navbar, Sidebar, Hero, Project, Hamburger, Burger, Navigation }
+export { Footer, Navbar, Sidebar, Hero, Project, Hamburger, Burger }

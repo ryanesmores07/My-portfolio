@@ -12,11 +12,11 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <div className="container">
-        <div className="burger" role="button" onClick={hideSidebar}>
-          {/* <MdClose className="icon" /> */}
+        {/* <div className="burger" role="button" onClick={hideSidebar}>
+          <MdClose className="icon" />
           <Hamburger />
-          {/* <Burger /> */}
-        </div>
+          <Burger />
+        </div> */}
         <div className="links">
           {links.map((link, index) => {
             const { url, text } = link
