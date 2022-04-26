@@ -38,7 +38,7 @@ const Navbar = () => {
           })}
         </div> */}
         {!isSidebarOpen && (
-          <div role="button">
+          <div role="button" className="burger-button">
             {/* onClick={showSidebar} */}
             <Hamburger />
             {/* <Burger /> */}
@@ -85,6 +85,8 @@ const Wrapper = styled.nav`
   .nav-items {
   }
 
+  .burger-button {
+  }
   .toggle-btn {
     /* margin-right: 3rem; */
     width: 15vw;
@@ -104,94 +106,6 @@ const Wrapper = styled.nav`
       /* background: var(--clr-primary-3); */
     }
   }
-
-  .menu-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 8rem;
-    height: 8rem;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    /* border: 3px solid var(--clr-black); */
-  }
-
-  .menu-btn-animate {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 8rem;
-    height: 8rem;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    /* border: 3px solid var(--clr-black); */
-  }
-
-  .menu-btn__burger {
-    width: 5rem;
-    height: 6px;
-    background: var(--clr-black);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-    transition: all 0.5s ease-in-out;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 5rem;
-      height: 6px;
-      background: var(--clr-black);
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-      transition: all 0.5s ease-in-out;
-    }
-
-    &::before {
-      transform: translateY(-16px);
-    }
-    &::after {
-      transform: translateY(16px);
-    }
-  }
-
-  /* ANIMATION */
-
-  .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-    transition: var(--transition);
-  }
-
-  .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    transition: var(--transition);
-  }
-
-  .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    transition: var(--transition);
-  }
-
-  /* .menu-btn-animate .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-    transition: var(--transition);
-  }
-
-  .menu-btn-animate .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    transition: var(--transition);
-  }
-
-  .menu-btn-animate .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    transition: var(--transition);
-  } */
 
   @media (min-width: 390px) {
     .nav-items {

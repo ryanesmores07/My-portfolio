@@ -84,7 +84,9 @@ const Wrapper = styled.article`
     border-radius: 2.5px;
 
     margin-bottom: 1rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    /* border-bottom: 0.5px solid black; */
+    /* box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2); */
   }
 
   .title {

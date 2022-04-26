@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <div>
       <Navbar />
 
-      {isSidebarOpen && <Sidebar />}
+      {/* {isSidebarOpen && <Sidebar />} */}
       {/* <Hamburger /> */}
       {children}
       <Footer />
