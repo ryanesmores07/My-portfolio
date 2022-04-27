@@ -8,20 +8,21 @@ const Hamburger = () => {
   const { links, hideSidebar, showSidebar, isSidebarOpen } =
     useContext(GatsbyContext)
   const [animate, setAnimate] = useState(false)
+  const [sidebar, setSidebar] = useState(false)
 
   return (
     <Wrapper>
       <div
         className={`menu-btn ${animate ? "open" : ""}`}
         role="button"
-        onClick={() => (!animate ? setAnimate(true) : setAnimate(false))}
+        onClick={() => setAnimate(!animate)}
         // onClick={showSidebar}
         // className={animate === true ? "menu-btn-animate" : "menu-btn"}
       >
         <div className="menu-btn__burger"></div>
       </div>
-      {animate && (
-        <aside className="sidebar">
+      <aside className="sidebar-container">
+        <div className={`${!animate ? "sidebar" : "sidebar  show"}`}>
           {links.map((link, index) => {
             return (
               <ul onClick={() => setAnimate(false)}>
@@ -31,9 +32,8 @@ const Hamburger = () => {
               </ul>
             )
           })}
-        </aside>
-        // <Sidebar />
-      )}
+        </div>
+      </aside>
     </Wrapper>
   )
 }
@@ -49,6 +49,7 @@ const Wrapper = styled.aside`
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     /* border: 3px solid var(--clr-black); */
+    z-index: 50;
   }
 
   .menu-btn__burger {
@@ -98,29 +99,60 @@ const Wrapper = styled.aside`
     transition: var(--transition);
   }
 
-  .sidebar {
-    position: fixed;
-    top: 7rem;
-    right: 15rem;
-    /* background-color: var(--clr-black); */
-    /* background: transparent; */
+  .sidebar-container {
+    .sidebar {
+      position: fixed;
+      top: 0rem;
+      right: -100rem;
 
-    /* opacity: 0.5; */
+      /* transform: translateX(-10rem); */
 
-    li {
-      color: var(--clr-white);
-      /* background-color: red; */
-      line-height: 1.3;
-      font-size: 9rem;
-      font-weight: 400;
-      -webkit-text-stroke: 1.2px black;
+      height: 100%;
+      padding: 7rem 10rem 7rem 7rem;
 
-      &:hover {
-        color: black;
-        transition: var(--transition);
+      background-color: rgba(255, 255, 255, 0.9);
+      transition: all 0.5s ease-in-out;
+
+      li {
+        color: var(--clr-black);
+        /* background-color: red; */
+        line-height: 2;
+        font-size: 3.5rem;
+        font-weight: 300;
+
+        -webkit-text-stroke: 1.2px black;
+
+        &:hover {
+          color: black;
+          transition: var(--transition);
+        }
       }
+    }
+    .sidebar.show {
+      /* transform: translateX(0); */
+      right: 0;
+      transition: all 0.5s ease-in-out;
     }
   }
 `
 
 export default Hamburger
+
+// {
+//   animate && (
+//     <aside className="sidebar-container">
+//       <div className={`${!animate ? "sidebar" : "sidebar  show"}`}>
+//         {links.map((link, index) => {
+//           return (
+//             <ul onClick={() => setAnimate(false)}>
+//               <Link to={link.url} className="yo">
+//                 <li>{link.text}</li>
+//               </Link>
+//             </ul>
+//           )
+//         })}
+//       </div>
+//     </aside>
+//     // <Sidebar />
+//   )
+// }

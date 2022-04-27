@@ -74,7 +74,7 @@ const Wrapper = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    /* width: 90%; */
     padding: 3rem 4rem;
   }
 
