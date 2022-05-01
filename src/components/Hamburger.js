@@ -57,7 +57,7 @@ const Wrapper = styled.aside`
     height: 3px;
     background: var(--clr-black);
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    /* box-shadow: 0 2px 5px var(--clr-black); */
     transition: all 0.5s ease-in-out;
 
     &::before,
@@ -68,7 +68,7 @@ const Wrapper = styled.aside`
       height: 3px;
       background: var(--clr-black);
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+      /* box-shadow: 0 2px 5px var(--clr-black); */
       transition: all 0.5s ease-in-out;
     }
 
@@ -132,6 +132,19 @@ const Wrapper = styled.aside`
       /* transform: translateX(0); */
       right: 0;
       transition: all 0.5s ease-in-out;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sidebar-container {
+      .sidebar {
+        li {
+          color: var(--clr-white);
+          font-size: 8rem;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+      }
     }
   }
 `

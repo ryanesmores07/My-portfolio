@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <Wrapper>
       <section className="container">
-        <h2>Contact</h2>
+        {/* <h2>Contact</h2> */}
         <div className="title">
           <h1>get in touch</h1>
         </div>

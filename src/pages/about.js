@@ -6,9 +6,7 @@ const About = () => {
   return (
     <Wrapper>
       <section className="container">
-        <div className="title">
-          <h2>About me</h2>
-        </div>
+        <div className="title">{/* <h2>About me</h2> */}</div>
         <div className="my-photo">
           <StaticImage
             className="photo"

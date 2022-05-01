@@ -12,7 +12,7 @@ const Projects = ({
     <>
       <Wrapper>
         <div className="container">
-          <h2>Projects</h2>
+          {/* <h2>Projects</h2> */}
           <div className="title">
             <h1>
               portfolio<span>&works</span>
@@ -36,6 +36,7 @@ const Wrapper = styled.main`
     h2 {
       font-weight: 200;
       font-size: 1.7rem;
+      /* margin-left: 0; */
     }
 
     .title {

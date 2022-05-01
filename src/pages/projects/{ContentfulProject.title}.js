@@ -1,8 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import { AiOutlineLeft } from "react-icons/ai"
 
 const ProjectTemplate = ({
   pageContext: { title: projectTitle },
@@ -12,6 +13,13 @@ const ProjectTemplate = ({
 
   return (
     <Wrapper>
+      <div className="return-container">
+        <AiOutlineLeft className="icon" />
+        <Link className="return" to="/projects">
+          Projects
+        </Link>
+      </div>
+
       <div className="container">
         <div className="project-title">
           <h2>{projectTitle}</h2>
@@ -48,6 +56,26 @@ const ProjectTemplate = ({
 
 const Wrapper = styled.main`
   background-color: var(--clr-grey-10);
+
+  .return-container {
+    .icon {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+    padding: 3rem 5rem 0;
+    display: flex;
+    align-items: center;
+    .return {
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+      font-weight: 200;
+      color: var(--clr-black);
+    }
+    &:hover {
+      transform: translateY(-0.2rem);
+      transition: 250ms ease;
+    }
+  }
   .container {
     padding: 3rem;
     display: flex;
@@ -97,7 +125,7 @@ const Wrapper = styled.main`
         padding: 2rem 1rem;
         background-color: var(--clr-white);
         box-shadow: var(--dark-shadow);
-        z-index: 10;
+        z-index: 5;
 
         .title {
           margin-bottom: 0.8rem;

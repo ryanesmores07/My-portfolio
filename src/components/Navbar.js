@@ -18,13 +18,13 @@ const Navbar = () => {
     <Wrapper>
       <nav className="container">
         <div className="logo">
-          <Link to="/">
-            <StaticImage
-              className="logo"
-              src="../../static/LogoMakr.png"
-              alt="logo"
-            />
-          </Link>
+          {/* <Link to="/"> */}
+          <StaticImage
+            className="logo"
+            src="../../static/LogoMakr.png"
+            alt="logo"
+          />
+          {/* </Link> */}
         </div>
         {/* <div className="nav-items">
           {links.map((link, index) => {

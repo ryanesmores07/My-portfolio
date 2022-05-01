@@ -9,9 +9,6 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Navbar />
-
-      {/* {isSidebarOpen && <Sidebar />} */}
-      {/* <Hamburger /> */}
       {children}
       <Footer />
     </div>
