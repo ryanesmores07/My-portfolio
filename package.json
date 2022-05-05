@@ -16,6 +16,7 @@
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "babel-plugin-styled-components": "^2.0.7",
+    "framer-motion": "^6.3.3",
     "gatsby": "^4.11.2",
     "gatsby-plugin-image": "^2.11.1",
     "gatsby-plugin-sharp": "^4.11.1",

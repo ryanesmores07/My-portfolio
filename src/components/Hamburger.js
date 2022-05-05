@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import styled from "styled-components"
 import { GatsbyContext } from "../context/context"
 import { Link } from "gatsby"
-import Sidebar from "./Sidebar"
+import { motion, AnimatePresence } from "framer-motion"
 
 const Hamburger = () => {
   const { links, hideSidebar, showSidebar, isSidebarOpen } =
@@ -12,28 +12,30 @@ const Hamburger = () => {
 
   return (
     <Wrapper>
-      <div
-        className={`menu-btn ${animate ? "open" : ""}`}
-        role="button"
-        onClick={() => setAnimate(!animate)}
-        // onClick={showSidebar}
-        // className={animate === true ? "menu-btn-animate" : "menu-btn"}
-      >
-        <div className="menu-btn__burger"></div>
-      </div>
-      <aside className="sidebar-container">
-        <div className={`${!animate ? "sidebar" : "sidebar  show"}`}>
-          {links.map((link, index) => {
-            return (
-              <ul onClick={() => setAnimate(false)}>
-                <Link to={link.url} className="yo">
-                  <li>{link.text}</li>
-                </Link>
-              </ul>
-            )
-          })}
+      <AnimatePresence>
+        <div
+          className={`menu-btn ${animate ? "open" : ""}`}
+          role="button"
+          onClick={() => setAnimate(!animate)}
+          // onClick={showSidebar}
+          // className={animate === true ? "menu-btn-animate" : "menu-btn"}
+        >
+          <div className="menu-btn__burger"></div>
         </div>
-      </aside>
+        <aside className="sidebar-container">
+          <motion.div className={`${!animate ? "sidebar" : "sidebar  show"}`}>
+            {links.map((link, index) => {
+              return (
+                <ul onClick={() => setAnimate(false)}>
+                  <Link to={link.url} className="yo">
+                    <li>{link.text}</li>
+                  </Link>
+                </ul>
+              )
+            })}
+          </motion.div>
+        </aside>
+      </AnimatePresence>
     </Wrapper>
   )
 }
