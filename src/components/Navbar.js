@@ -6,8 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { GatsbyContext } from "../context/context"
 
-import { IoReorderTwoOutline } from "react-icons/io5"
-import { Hamburger, Burger } from "../components"
+import { Hamburger } from "../components"
 
 const Navbar = () => {
   const { isSidebarOpen, showSidebar, links, hideSidebar } =
@@ -18,44 +17,17 @@ const Navbar = () => {
     <Wrapper>
       <nav className="container">
         <div className="logo">
-          {/* <Link to="/"> */}
-          <StaticImage
-            className="logo"
-            src="../../static/LogoMakr.png"
-            alt="logo"
-          />
-          {/* </Link> */}
+          <Link to="/" onClick={() => hideSidebar()}>
+            <StaticImage
+              className="logo"
+              src="../../static/LogoMakr.png"
+              alt="logo"
+            />
+          </Link>
         </div>
-        {/* <div className="nav-items">
-          {links.map((link, index) => {
-            return (
-              <ul>
-                <li>
-                  <Link to={link.url}>{link.text}</Link>
-                </li>
-              </ul>
-            )
-          })}
-        </div> */}
-        {!isSidebarOpen && (
-          <div role="button" className="burger-button">
-            {/* onClick={showSidebar} */}
-            <Hamburger />
-            {/* <Burger /> */}
-          </div>
-          // <div
-          //   className={`menu-btn ${animate}`}
-          //   role="button"
-          //   onClick={() => (!animate ? setAnimate("open") : setAnimate(""))}
-          //   // onClick={showSidebar}
-          //   // className={animate === true ? "menu-btn-animate" : "menu-btn"}
-          // >
-          //   <div className="menu-btn__burger"></div>
-          // </div>
-          // <button className="toggle-btn" onClick={showSidebar}>
-          //   <IoReorderTwoOutline />
-          // </button>
-        )}
+        <div role="button" className="burger-button">
+          <Hamburger />
+        </div>
       </nav>
     </Wrapper>
   )

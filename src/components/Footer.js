@@ -28,7 +28,7 @@ const Footer = () => {
 }
 
 const Wrapper = styled.footer`
-  padding-top: 5rem;
+  padding-top: 10rem;
   a {
     font-size: 2rem;
   }

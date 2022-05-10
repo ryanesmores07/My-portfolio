@@ -1,41 +1,22 @@
 import React, { useContext, useState } from "react"
 import styled from "styled-components"
 import { GatsbyContext } from "../context/context"
-import { Link } from "gatsby"
-import { motion, AnimatePresence } from "framer-motion"
+import { Sidebar } from "../components/"
 
 const Hamburger = () => {
-  const { links, hideSidebar, showSidebar, isSidebarOpen } =
+  const { links, hideSidebar, showSidebar, isSidebarOpen, setIsSidebarOpen } =
     useContext(GatsbyContext)
-  const [animate, setAnimate] = useState(false)
-  const [sidebar, setSidebar] = useState(false)
 
   return (
     <Wrapper>
-      <AnimatePresence>
-        <div
-          className={`menu-btn ${animate ? "open" : ""}`}
-          role="button"
-          onClick={() => setAnimate(!animate)}
-          // onClick={showSidebar}
-          // className={animate === true ? "menu-btn-animate" : "menu-btn"}
-        >
-          <div className="menu-btn__burger"></div>
-        </div>
-        <aside className="sidebar-container">
-          <motion.div className={`${!animate ? "sidebar" : "sidebar  show"}`}>
-            {links.map((link, index) => {
-              return (
-                <ul onClick={() => setAnimate(false)}>
-                  <Link to={link.url} className="yo">
-                    <li>{link.text}</li>
-                  </Link>
-                </ul>
-              )
-            })}
-          </motion.div>
-        </aside>
-      </AnimatePresence>
+      <div
+        className={`menu-btn ${isSidebarOpen ? "open" : ""}`}
+        role="button"
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+      >
+        <div className="menu-btn__burger"></div>
+      </div>
+      <Sidebar />
     </Wrapper>
   )
 }
@@ -100,74 +81,6 @@ const Wrapper = styled.aside`
     transform: rotate(-45deg) translate(35px, 35px);
     transition: var(--transition);
   }
-
-  .sidebar-container {
-    .sidebar {
-      position: fixed;
-      top: 0rem;
-      right: -100rem;
-
-      /* transform: translateX(-10rem); */
-
-      height: 100%;
-      padding: 7rem 10rem 7rem 7rem;
-
-      background-color: rgba(255, 255, 255, 0.9);
-      transition: all 0.5s ease-in-out;
-
-      li {
-        color: var(--clr-black);
-        /* background-color: red; */
-        line-height: 2;
-        font-size: 3.5rem;
-        font-weight: 300;
-
-        -webkit-text-stroke: 1.2px black;
-
-        &:hover {
-          color: black;
-          transition: var(--transition);
-        }
-      }
-    }
-    .sidebar.show {
-      /* transform: translateX(0); */
-      right: 0;
-      transition: all 0.5s ease-in-out;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .sidebar-container {
-      .sidebar {
-        li {
-          color: var(--clr-white);
-          font-size: 8rem;
-          font-weight: 400;
-          line-height: 1.5;
-        }
-      }
-    }
-  }
 `
 
 export default Hamburger
-
-// {
-//   animate && (
-//     <aside className="sidebar-container">
-//       <div className={`${!animate ? "sidebar" : "sidebar  show"}`}>
-//         {links.map((link, index) => {
-//           return (
-//             <ul onClick={() => setAnimate(false)}>
-//               <Link to={link.url} className="yo">
-//                 <li>{link.text}</li>
-//               </Link>
-//             </ul>
-//           )
-//         })}
-//       </div>
-//     </aside>
-//     // <Sidebar />
-//   )
-// }
