@@ -34,6 +34,7 @@ const Sidebar = () => {
 
 const Wrapper = styled.aside`
   .sidebar-container {
+    overflow: hidden;
     .sidebar {
       position: fixed;
       top: 0rem;
