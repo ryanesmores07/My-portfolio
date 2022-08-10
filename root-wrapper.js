@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "./src/components/Layout"
 
-import { GatsbyProvide, GatsbyProvider } from "./src/context/context"
+import { GatsbyProvide } from "./src/context/context"
 
 export const wrapRootElement = ({ element, props }) => {
   return (

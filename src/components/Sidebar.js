@@ -2,39 +2,33 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 import { GatsbyContext } from "../context/context"
 import { Link } from "gatsby"
-import { motion, AnimatePresence } from "framer-motion"
 
 const Sidebar = () => {
   const { links, hideSidebar, isSidebarOpen } = useContext(GatsbyContext)
   console.log(links)
 
   return (
-    <AnimatePresence>
-      <Wrapper>
-        <section className="sidebar-container">
-          <motion.div
-            exit={{ opacity: 0 }}
-            className={`${!isSidebarOpen ? "sidebar" : "sidebar show"}`}
-          >
-            {links.map((link, index) => {
-              return (
-                <ul onClick={() => hideSidebar()}>
-                  <Link to={link.url} className="yo">
-                    <li>{link.text}</li>
-                  </Link>
-                </ul>
-              )
-            })}
-          </motion.div>
-        </section>
-      </Wrapper>
-    </AnimatePresence>
+    <Wrapper>
+      <section className="sidebar-container">
+        <div className={`${!isSidebarOpen ? "sidebar" : "sidebar show"}`}>
+          {links.map((link, index) => {
+            return (
+              <ul onClick={() => hideSidebar()}>
+                <Link to={link.url} className="yo">
+                  <li>{link.text}</li>
+                </Link>
+              </ul>
+            )
+          })}
+        </div>
+      </section>
+    </Wrapper>
   )
 }
 
 const Wrapper = styled.aside`
   .sidebar-container {
-    overflow: hidden;
+    /* overflow: hidden; */
     .sidebar {
       position: fixed;
       top: 0rem;
