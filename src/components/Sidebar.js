@@ -5,30 +5,8 @@ import { Link } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
 
 const Sidebar = () => {
-  const { hideSidebar, isSidebarOpen } = useContext(GatsbyContext)
-
-  const links = [
-    {
-      id: 1,
-      text: "home",
-      url: "/",
-    },
-    {
-      id: 2,
-      text: "about",
-      url: "/about/",
-    },
-    {
-      id: 3,
-      text: "projects",
-      url: "/projects/",
-    },
-    {
-      id: 5,
-      text: "contact",
-      url: "/contact/",
-    },
-  ]
+  const { links, hideSidebar, isSidebarOpen } = useContext(GatsbyContext)
+  console.log(links)
 
   return (
     <AnimatePresence>
@@ -40,7 +18,7 @@ const Sidebar = () => {
           >
             {links.map((link, index) => {
               return (
-                <ul onClick={() => hideSidebar()} key={index}>
+                <ul onClick={() => hideSidebar()}>
                   <Link to={link.url} className="yo">
                     <li>{link.text}</li>
                   </Link>
@@ -68,7 +46,7 @@ const Wrapper = styled.aside`
       padding: 7rem 10rem 7rem 7rem;
 
       background-color: rgba(255, 255, 255, 0.9);
-      /* transition: all 0.5s ease-in-out; */
+      transition: all 0.5s ease-in-out;
 
       li {
         color: var(--clr-black);
@@ -81,14 +59,14 @@ const Wrapper = styled.aside`
 
         &:hover {
           color: black;
-          /* transition: var(--transition); */
+          transition: var(--transition);
         }
       }
     }
     .sidebar.show {
       /* transform: translateX(0); */
       right: 0;
-      /* transition: all 0.5s ease-in-out; */
+      transition: all 0.5s ease-in-out;
     }
   }
 
