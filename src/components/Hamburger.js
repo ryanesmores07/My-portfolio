@@ -16,7 +16,8 @@ const Hamburger = () => {
       >
         <div className="menu-btn__burger"></div>
       </div>
-      <Sidebar />
+      {/* <Sidebar /> */}
+      {isSidebarOpen && <Sidebar />}
     </Wrapper>
   )
 }
