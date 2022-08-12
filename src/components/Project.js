@@ -35,7 +35,7 @@ const Project = () => {
           const { title, slug, description, image, github, url, content } =
             project
           return (
-            <div className="container-item">
+            <div className="container-item" key={index}>
               <Link to={`/projects/${slug}`}>
                 <GatsbyImage
                   image={getImage(image)}
