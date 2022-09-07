@@ -15,6 +15,7 @@ const Sidebar = () => {
             {links.map((link, index) => {
               return (
                 <Link to={link.url} key={index}>
+                  {/* <li>{link.text}</li> */}
                   <li>{link.text}</li>
                 </Link>
               )
@@ -46,10 +47,11 @@ const Wrapper = styled.aside`
         color: var(--clr-black);
         /* background-color: red; */
         line-height: 2;
+        /* font-size: 2rem; */
         font-size: 3.5rem;
         font-weight: 300;
 
-        -webkit-text-stroke: 1.2px black;
+        /* -webkit-text-stroke: 1.2px black; */
 
         &:hover {
           color: black;

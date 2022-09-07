@@ -45,7 +45,6 @@ const Contact = () => {
 
 const Wrapper = styled.header`
   width: 100%;
-  
 
   .container {
     margin: 0 auto;
@@ -53,80 +52,71 @@ const Wrapper = styled.header`
     /* padding: 0rem rem; */
 
     h1 {
-        font-size: 5.5rem;
-        font-weight: 300;
-        letter-spacing: -2px;
-        margin-bottom: 10rem;
+      font-size: 5.5rem;
+      font-weight: 300;
+      letter-spacing: -2px;
+      margin-bottom: 10rem;
     }
 
     h2 {
-        font-weight: 200;
-        font-size: 1.7rem;
+      font-weight: 200;
+      font-size: 1.7rem;
     }
 
-    
-
-    a, h3 {
-        font-weight: 400;
-        font-size: 2rem;
-        color: var(--clr-black);
-        margin-bottom: 2rem;
-        font-family: var(--ff-primary);
+    a,
+    h3 {
+      font-weight: 400;
+      font-size: 2rem;
+      color: var(--clr-black);
+      margin-bottom: 2rem;
+      font-family: var(--ff-primary);
     }
 
-    
-    a { 
-        /* font-style: var(--ff-primary); */
-        font-weight: 200;
+    a {
+      /* font-style: var(--ff-primary); */
+      font-weight: 200;
     }
 
     p {
-        font-size: 2rem;
-        margin-bottom: 10rem;
+      font-size: 2rem;
+      margin-bottom: 10rem;
     }
 
-
-    .social-container{
-
+    .social-container {
       .flex-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0;
 
-         .social-text {
-        margin: 0 1rem;
+        .social-text {
+          margin: 0 1rem;
         }
 
         .arrow-icon {
-        font-size: 2rem;
-        margin-right: 1rem;
+          font-size: 2rem;
+          margin-right: 1rem;
         }
       }
-      
-      .flex-container:hover, .flex-container:focus {
-       
-        
+
+      .flex-container:hover,
+      .flex-container:focus {
         .social-text {
-          transform: translateX(.3rem);
+          transform: translateX(0.3rem);
           transition: all 0.1s linear;
           color: steelblue;
         }
       }
-     
 
-     
-      
       .line {
-      height: .1rem;
-      width: 100%;
-      background: var(--clr-black);
-      opacity: .2;
-      margin: .7rem 0;
-      
+        height: 0.1rem;
+        width: 100%;
+        background: var(--clr-black);
+        opacity: 0.2;
+        margin: 0.7rem 0;
       }
     }
-    
+
     @media (min-width: 450px) {
       h1 {
         font-size: 7rem;
@@ -170,6 +160,7 @@ const Wrapper = styled.header`
         }
       }
     }
+  }
 `
 
 export default Contact
