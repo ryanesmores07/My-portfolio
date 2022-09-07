@@ -2,21 +2,26 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 import { GatsbyContext } from "../context/context"
 import { Link } from "gatsby"
+import * as style from "./Sidebar.module.css"
 
 const Sidebar = () => {
   const { links, hideSidebar, isSidebarOpen } = useContext(GatsbyContext)
-  console.log(links)
 
   return (
     <Wrapper>
       <section className="sidebar-container">
-        <div className={`${!isSidebarOpen ? "sidebar" : "sidebar show"}`}>
-          <ul onClick={() => hideSidebar()}>
+        <div
+          className={
+            !isSidebarOpen
+              ? `${style.sidebar}`
+              : `${style.sidebar} ${style.show}`
+          }
+        >
+          <ul onClick={hideSidebar}>
             {links.map((link, index) => {
               return (
                 <Link to={link.url} key={index}>
-                  {/* <li>{link.text}</li> */}
-                  <li>{link.text}</li>
+                  <li className={style.li}>{link.text}</li>
                 </Link>
               )
             })}
@@ -30,12 +35,10 @@ const Sidebar = () => {
 const Wrapper = styled.aside`
   .sidebar-container {
     overflow: hidden;
-    .sidebar {
+    /* .sidebar {
       position: fixed;
       top: 0rem;
       right: -100%;
-
-      /* transform: translateX(-10rem); */
 
       height: 100%;
       padding: 7rem 10rem 7rem 7rem;
@@ -45,9 +48,9 @@ const Wrapper = styled.aside`
 
       li {
         color: var(--clr-black);
-        /* background-color: red; */
+       
         line-height: 2;
-        /* font-size: 2rem; */
+        
         font-size: 3.5rem;
         font-weight: 300;
 
@@ -60,23 +63,10 @@ const Wrapper = styled.aside`
       }
     }
     .sidebar.show {
-      /* transform: translateX(0); */
+      transform: translateX(0);
       right: 0;
       transition: all 0.5s ease-in-out;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .sidebar-container {
-      .sidebar {
-        li {
-          color: var(--clr-white);
-          font-size: 8rem;
-          font-weight: 400;
-          line-height: 1.5;
-        }
-      }
-    }
+    } */
   }
 `
 

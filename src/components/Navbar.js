@@ -9,9 +9,7 @@ import { GatsbyContext } from "../context/context"
 import { Hamburger } from "../components"
 
 const Navbar = () => {
-  const { isSidebarOpen, showSidebar, links, hideSidebar } =
-    useContext(GatsbyContext)
-  const [animate, setAnimate] = useState("")
+  const { hideSidebar } = useContext(GatsbyContext)
 
   return (
     <Wrapper>

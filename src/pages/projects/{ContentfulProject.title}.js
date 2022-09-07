@@ -9,7 +9,7 @@ const ProjectTemplate = ({
   pageContext: { title: projectTitle },
   data: { info: datas },
 }) => {
-  const { title, github, slug, url, image, content, description } = datas
+  const { title, github, url, content, description } = datas
 
   return (
     <Wrapper>

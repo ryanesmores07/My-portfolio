@@ -1,11 +1,9 @@
-import React, { useContext } from "react"
+import React from "react"
 import "../assets/css/main.css"
-import { GatsbyContext } from "../context/context"
 
-import { Navbar, Footer, Sidebar, Hamburger, Navigation } from "../components/"
+import { Navbar, Footer } from "../components/"
 
 const Layout = ({ children }) => {
-  const { isSidebarOpen } = useContext(GatsbyContext)
   return (
     <div>
       <Navbar />
