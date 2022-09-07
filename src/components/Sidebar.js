@@ -51,7 +51,7 @@ const Wrapper = styled.aside`
         font-size: 3.5rem;
         font-weight: 300;
 
-        /* -webkit-text-stroke: 1.2px black; */
+        -webkit-text-stroke: 1.2px black;
 
         &:hover {
           color: black;
