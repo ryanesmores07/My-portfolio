@@ -10,14 +10,11 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <section className="sidebar-container">
-        <div
-          exit={{ opacity: 0 }}
-          className={`${!isSidebarOpen ? "sidebar" : "sidebar show"}`}
-        >
+        <div className={`${!isSidebarOpen ? "sidebar" : "sidebar show"}`}>
           <ul onClick={() => hideSidebar()}>
             {links.map((link, index) => {
               return (
-                <Link to={link.url} className="yo" key={index}>
+                <Link to={link.url} key={index}>
                   <li>{link.text}</li>
                 </Link>
               )

@@ -175,6 +175,11 @@ const Wrapper = styled.article`
     grid-row: 6 / span 2;
   }
 
+  .container-item:nth-of-type(5) {
+    grid-column: 1 / 2;
+    grid-row: 9 / span 2;
+  }
+
   .container-item:nth-of-type(even) {
     justify-self: end;
   }
