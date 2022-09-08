@@ -38,14 +38,10 @@
 }
 
 @media (min-width: 768px) {
-  .sidebar-container {
-    .sidebar {
-      li {
-        color: var(--clr-white);
-        font-size: 8rem;
-        font-weight: 400;
-        line-height: 1.5;
-      }
-    }
+  .li {
+    color: var(--clr-white);
+    font-size: 8rem;
+    font-weight: 400;
+    line-height: 1.5;
   }
 }
