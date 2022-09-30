@@ -57,6 +57,15 @@ const About = () => {
 const Wrapper = styled.main`
   width: 100%;
 
+  @keyframes fade-in {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
   .container {
     max-width: 80%;
     /* padding: 3rem; */
@@ -75,7 +84,8 @@ const Wrapper = styled.main`
       margin-bottom: 5rem;
       .photo {
         object-fit: contain;
-        /* max-width: 30%; */
+        animation: left-to-right calc(var(--transition-duration) + 400ms)
+          ease-out forwards;
       }
     }
 

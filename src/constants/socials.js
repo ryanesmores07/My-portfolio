@@ -36,7 +36,7 @@ const data = [
     id: 5,
     icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
     text: "twitter",
-    url: "https://twitter.com/EsmoresRyan",
+    url: "https://twitter.com/",
   },
 ]
 

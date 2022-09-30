@@ -52,12 +52,12 @@ const Wrapper = styled.header`
     /* padding: 0rem rem; */
 
     .header {
-      animation: right-to-left calc(var(--transition-duration) + 400ms) ease-out
+      animation: top-to-bottom calc(var(--transition-duration) + 400ms) ease-out
         forwards;
     }
 
     .info {
-      animation: left-to-right calc(var(--transition-duration) + 400ms) ease-out
+      animation: right-to-left calc(var(--transition-duration) + 400ms) ease-out
         forwards;
     }
 
