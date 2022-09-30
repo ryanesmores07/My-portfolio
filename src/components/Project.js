@@ -77,11 +77,11 @@ const Wrapper = styled.article`
 
     .container-item {
       margin-bottom: 5rem;
-      position: relative;
-      /* border: 2px solid red; */
 
-      &:hover::after {
-        opacity: 1;
+      &:hover {
+        .title {
+          color: blueviolet;
+        }
       }
 
       .image {
@@ -106,9 +106,6 @@ const Wrapper = styled.article`
       &:hover .image {
         cursor: pointer;
         transform: translateY(-0.35em) scale(1.01);
-        .title {
-          color: blueviolet;
-        }
       }
     }
   }
