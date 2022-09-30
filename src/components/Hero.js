@@ -66,6 +66,18 @@ const Wrapper = styled.main`
         ease-in-out forwards;
     }
 
+    .introduction-1 {
+      transform: translateX(-1000%);
+      animation: left-to-right calc(var(--transition-duration) + 400ms)
+        ease-in-out forwards;
+    }
+
+    .introduction-2 {
+      transform: translateX(1000%);
+      animation: right-to-left calc(var(--transition-duration) + 400ms)
+        ease-in-out forwards;
+    }
+
     .header,
     .web-dev {
       font-size: 7rem;
@@ -86,6 +98,12 @@ const Wrapper = styled.main`
     .introduction-2 {
       color: var(--clr-grey-5);
       font-weight: 300;
+    }
+
+    .read-more {
+      transform: translateY(1500%);
+      animation: bottom-to-top var(--transition-duration) ease-out forwards
+        200ms;
     }
   }
 
@@ -217,6 +235,15 @@ const Wrapper = styled.main`
     }
     to {
       transform: translateX(0);
+    }
+  }
+
+  @keyframes bottom-to-top {
+    from {
+      transform: translateY(1500%);
+    }
+    to {
+      transform: translateY(0);
     }
   }
 `
