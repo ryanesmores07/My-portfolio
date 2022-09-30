@@ -31,13 +31,13 @@ const Hero = () => {
 
 const Wrapper = styled.main`
   width: 100%;
+  --transition-duration: 100ms;
   /* min-height: 100vh; */
 
   .container {
     padding: 5vh 15vw;
     display: flex;
     flex-direction: column;
-
     text-align: center;
 
     h1 {
@@ -48,7 +48,22 @@ const Wrapper = styled.main`
     }
 
     .name {
+      transform: translateY(-1000%);
       font-weight: 300;
+      animation: top-to-bottom var(--transition-duration) ease-out forwards
+        200ms;
+    }
+
+    .header {
+      transform: translateX(-1000%);
+      animation: left-to-right calc(var(--transition-duration) + 400ms)
+        ease-in-out forwards;
+    }
+
+    .web-dev {
+      transform: translateX(1000%);
+      animation: right-to-left calc(var(--transition-duration) + 400ms)
+        ease-in-out forwards;
     }
 
     .header,
@@ -169,6 +184,39 @@ const Wrapper = styled.main`
 
       .read-more {
       }
+    }
+  }
+
+  @keyframes top-to-bottom {
+    from {
+      transform: translateY(-1000%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes left-to-right {
+    from {
+      transform: translateX(-1000%);
+    }
+    90% {
+      transform: translateX(10%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes right-to-left {
+    from {
+      transform: translateX(1000%);
+    }
+    90% {
+      transform: translateX(-10%);
+    }
+    to {
+      transform: translateX(0);
     }
   }
 `
