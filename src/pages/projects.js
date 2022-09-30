@@ -14,12 +14,14 @@ const Projects = ({
         <div className="container">
           {/* <h2>Projects</h2> */}
           <div className="title">
-            <h1>
+            <h1 className="header">
               portfolio<span>&works</span>
             </h1>
           </div>
           <div className="content">
-            <h2>Some of the front-end works and projects that I'm proud of</h2>
+            <h2 className="info">
+              Some of the front-end works and projects that I'm proud of
+            </h2>
           </div>
         </div>
       </Wrapper>
@@ -43,6 +45,12 @@ const Wrapper = styled.main`
       display: flex;
       justify-content: center;
       letter-spacing: -3px;
+
+      .header {
+        animation: left-to-right calc(var(--transition-duration) + 400ms)
+          ease-out forwards;
+      }
+
       h1 {
         font-size: 5.5rem;
         font-weight: 300;
@@ -58,6 +66,12 @@ const Wrapper = styled.main`
       text-align: center;
       max-width: 50ch;
       margin: 0 auto;
+
+      .info {
+        transform: translateX(1000%);
+        animation: right-to-left calc(var(--transition-duration) + 400ms)
+          ease-out forwards;
+      }
     }
   }
 

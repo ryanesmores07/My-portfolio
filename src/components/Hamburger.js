@@ -11,27 +11,14 @@ const Hamburger = () => {
   return (
     <Wrapper>
       <div
-        className={`menu-btn ${isSidebarOpen ? "open" : ""}`}
+        className={`${isSidebarOpen ? "menu-btn open" : "menu-btn"}`}
         role="button"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
         <div className="menu-btn__burger"></div>
       </div>
-      {/* <Sidebar /> */}
+
       {isSidebarOpen && <Sidebar />}
-      {/* {isSidebarOpen && (
-        <section className="sidebar-container">
-          <ul onClick={() => hideSidebar()}>
-            {links.map((link, index) => {
-              return (
-                <Link to={link.url} className="yo" key={index}>
-                  <li>{link.text}</li>
-                </Link>
-              )
-            })}
-          </ul>
-        </section>
-      )} */}
     </Wrapper>
   )
 }

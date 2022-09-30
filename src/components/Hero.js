@@ -31,7 +31,7 @@ const Hero = () => {
 
 const Wrapper = styled.main`
   width: 100%;
-  --transition-duration: 100ms;
+
   /* min-height: 100vh; */
 
   .container {
@@ -202,48 +202,6 @@ const Wrapper = styled.main`
 
       .read-more {
       }
-    }
-  }
-
-  @keyframes top-to-bottom {
-    from {
-      transform: translateY(-1000%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes left-to-right {
-    from {
-      transform: translateX(-1000%);
-    }
-    90% {
-      transform: translateX(10%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes right-to-left {
-    from {
-      transform: translateX(1000%);
-    }
-    90% {
-      transform: translateX(-10%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes bottom-to-top {
-    from {
-      transform: translateY(1500%);
-    }
-    to {
-      transform: translateY(0);
     }
   }
 `

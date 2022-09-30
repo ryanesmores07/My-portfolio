@@ -51,37 +51,6 @@ const Wrapper = styled.nav`
   .logo {
     max-width: 10rem;
   }
-
-  .nav-items {
-  }
-
-  .burger-button {
-  }
-  .toggle-btn {
-    /* margin-right: 3rem; */
-    width: 15vw;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 7rem;
-    /* border-radius: 2rem; */
-    border: transparent;
-    /* color: var(--clr-black); */
-    background: transparent;
-    cursor: pointer;
-    transition: var(--transition);
-    &:hover,
-    &:focus {
-      /* background: var(--clr-primary-3); */
-    }
-  }
-
-  @media (min-width: 390px) {
-    .nav-items {
-      display: none;
-    }
-  }
 `
 
 export default Navbar

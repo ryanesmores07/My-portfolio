@@ -9,10 +9,10 @@ const Contact = () => {
       <section className="container">
         {/* <h2>Contact</h2> */}
         <div className="title">
-          <h1>get in touch</h1>
+          <h1 className="header">get in touch</h1>
         </div>
         <div className="content">
-          <p>
+          <p className="info">
             What is your challenge? I can help you with your website front-end
             development needs and make it fully responsive with the design and
             style you like!
@@ -50,6 +50,16 @@ const Wrapper = styled.header`
     margin: 0 auto;
     max-width: 80%;
     /* padding: 0rem rem; */
+
+    .header {
+      animation: right-to-left calc(var(--transition-duration) + 400ms) ease-out
+        forwards;
+    }
+
+    .info {
+      animation: left-to-right calc(var(--transition-duration) + 400ms) ease-out
+        forwards;
+    }
 
     h1 {
       font-size: 5.5rem;
