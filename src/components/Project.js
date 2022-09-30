@@ -30,7 +30,7 @@ const Project = () => {
   const projects = data.info.nodes
   return (
     <Wrapper>
-      <article className="container">
+      <article className=" container">
         {projects.map((project, index) => {
           const { title, slug, description, image, github, url, content } =
             project
@@ -40,7 +40,7 @@ const Project = () => {
                 <GatsbyImage
                   image={getImage(image)}
                   alt={title}
-                  className="image"
+                  className="image content"
                 />
 
                 <h2 className="title">{title}</h2>
@@ -56,66 +56,66 @@ const Project = () => {
 
 const Wrapper = styled.article`
   width: 100%;
+  overflow: hidden;
 
   a {
     color: var(--clr-black);
   }
 
+  .content {
+    box-shadow: 0 0.125rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+    transition: transform 150ms ease;
+  }
+
   .container {
     padding: 3rem;
-
-    color: var(--clr-black);
     display: flex;
     width: 90%;
     margin: 0 auto;
-    /* box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2); */
-    border-radius: 2rem;
     flex-direction: column;
     /* margin-bottom: 3rem; */
 
     .container-item {
       margin-bottom: 5rem;
+      position: relative;
+      /* border: 2px solid red; */
+
+      &:hover::after {
+        opacity: 1;
+      }
+
+      .image {
+        object-fit: cover;
+        border-radius: 2.5px;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .title {
+        font-weight: 300;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        font-size: 1.8rem;
+        line-height: 3rem;
+        font-weight: 200;
+      }
+
+      &:hover .image {
+        cursor: pointer;
+        transform: translateY(-0.35em) scale(1.01);
+        .title {
+          color: blueviolet;
+        }
+      }
     }
-  }
-
-  .image {
-    /* object-fit: cover; */
-    background-size: cover;
-    border-radius: 2.5px;
-
-    margin-bottom: 1rem;
-    /* border: 1px solid black; */
-    /* border-bottom: 0.5px solid black; */
-    /* box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2); */
-  }
-
-  .title {
-    font-weight: 300;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .description {
-    font-size: 1.8rem;
-    line-height: 3rem;
-    font-weight: 200;
-
-    /* margin-bottom: 10rem; */
   }
 
   @media (min-width: 450px) {
     .container {
       .container-item {
-        &:hover {
-          cursor: pointer;
-          .title {
-            color: blueviolet;
-          }
-          .image {
-            box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
-            transition: all 0.1s ease-in-out;
-          }
-        }
       }
 
       .image {
