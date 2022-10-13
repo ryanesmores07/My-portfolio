@@ -1,12 +1,10 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import { GatsbyContext } from "../context/context"
 import { Sidebar } from "../components/"
-import { Link } from "gatsby"
 
 const Hamburger = () => {
-  const { links, hideSidebar, showSidebar, isSidebarOpen, setIsSidebarOpen } =
-    useContext(GatsbyContext)
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(GatsbyContext)
 
   return (
     <Wrapper>

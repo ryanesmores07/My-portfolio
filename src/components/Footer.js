@@ -1,14 +1,13 @@
 import React from "react"
 import data from "../constants/socials"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 const Footer = () => {
   return (
     <Wrapper>
       <main className="container">
         {data.map((social, index) => {
-          const { id, text, url, icon } = social
+          const { text, url } = social
           return (
             <ul className="social-links" key={index}>
               <li>

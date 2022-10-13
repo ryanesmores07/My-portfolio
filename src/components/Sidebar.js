@@ -3,10 +3,9 @@ import styled from "styled-components"
 import { GatsbyContext } from "../context/context"
 import { Link } from "gatsby"
 import * as style from "./Sidebar.module.css"
-import { Hamburger } from "../components/"
 
 const Sidebar = () => {
-  const { links, hideSidebar, isSidebarOpen } = useContext(GatsbyContext)
+  const { links, hideSidebar } = useContext(GatsbyContext)
 
   return (
     <Wrapper>
