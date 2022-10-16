@@ -19,10 +19,10 @@ const Contact = () => {
           </p>
         </div>
         <div className="socials">
-          <a href="#">
+          <a href="mailto:ryanesmores07@gmail.com">
             <h3>ryanesmores07@gmail.com</h3>
           </a>
-          <a href="#">
+          <a href="tel:08075750507">
             <h3 style={{ marginBottom: "6rem" }}>+81 80-7575-0507</h3>
           </a>
           {socials.map((social, index) => {

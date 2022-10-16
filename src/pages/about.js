@@ -44,6 +44,7 @@ const About = () => {
               <li>JavaScript</li>
               <li>ReactJS</li>
               <li>GatsbyJS</li>
+              <li>NextJS</li>
               <li>StyledComponents</li>
               <li>Github</li>
             </ul>

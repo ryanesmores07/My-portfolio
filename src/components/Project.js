@@ -85,10 +85,11 @@ const Wrapper = styled.article`
       }
 
       .image {
-        object-fit: cover;
         border-radius: 2.5px;
+        background-size: cover;
         max-width: 100%;
         margin-bottom: 1rem;
+        /* height: 38rem; */
       }
 
       .title {
