@@ -14,8 +14,7 @@ const Contact = () => {
         <div className="content">
           <p className="info">
             What is your challenge? I can help you with your website front-end
-            development needs and make it fully responsive with the design and
-            style you like!
+            development needs and make it fully responsive for web and mobile!
           </p>
         </div>
         <div className="socials">

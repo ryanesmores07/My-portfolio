@@ -25,6 +25,7 @@ const About = () => {
             love learning new things whether its a new skill, or a hobby, and I
             always strive to be a better version of myself.
           </p>
+
           <div className="blockquote-container">
             <div className="blockquote">
               <q>You can do anything you set your mind to.</q>
@@ -32,11 +33,26 @@ const About = () => {
             </div>
           </div>
           <p>
+            I'm always trying to grow and learn something new. I lose track of
+            time when studying languages or simply reading a good book.
+          </p>
+          <p>
             I may lack the experience of working on a real world project in the
             tech world, but I can guarantee that I pick up quickly, and my
-            enthusiasism, and eagerness to learn will make up for it.
+            enthusiasism, and eagerness to learn will make up for my
+            shortcomings and I will assure you that I will be one of the great
+            assets of the company in the future.
           </p>
-          <h2 style={{ fontWeight: 700 }}>Tech list:</h2>
+          <a
+            className="CV"
+            href="https://drive.google.com/file/d/1kvZM7CeuKyiVVQQaFmlSj-ME8wwEBqPd/view?usp=sharing"
+          >
+            Download my CV
+          </a>
+
+          <h2 style={{ fontWeight: 700, marginTop: "7rem" }}>
+            My Current Stacks:
+          </h2>
           <div className="tech-container">
             <ul className="tech-list">
               <li>HTML</li>
@@ -45,8 +61,11 @@ const About = () => {
               <li>ReactJS</li>
               <li>GatsbyJS</li>
               <li>NextJS</li>
-              <li>StyledComponents</li>
+              <li>Styled-Components</li>
               <li>Github</li>
+              <li>GraphQL</li>
+              <li>REST</li>
+              <li>AXIOS</li>
             </ul>
           </div>
         </div>
@@ -91,8 +110,11 @@ const Wrapper = styled.main`
     }
 
     .content {
+      padding: 0 10rem;
+      /* background-color: red; */
       h2 {
-        transform: translateX(-3rem);
+        align-self: flex-start;
+        transform: translateX(-5rem);
         font-weight: 300;
         font-family: var(--ff-primary);
         font-size: 2.5rem;
@@ -108,6 +130,22 @@ const Wrapper = styled.main`
       p {
         font-size: 1.5rem;
         margin-bottom: 2.5rem;
+        /* max-width: 80%; */
+      }
+
+      .CV {
+        margin-bottom: 3rem;
+        font-weight: 400;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: purple;
+          height: 2px;
+        }
       }
     }
 
@@ -177,7 +215,8 @@ const Wrapper = styled.main`
 
       .content {
         h2 {
-          font-size: 3rem;
+          font-size: 3.2rem;
+          font-weight: 500;
         }
 
         h3 {
@@ -187,7 +226,7 @@ const Wrapper = styled.main`
 
         p {
           font-size: 2rem;
-          margin-bottom: 4rem;
+          margin-bottom: 2.5rem;
         }
 
         .blockquote-container {
@@ -201,8 +240,10 @@ const Wrapper = styled.main`
       .tech-container {
         .tech-list {
           li {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
+            padding: 0 1rem;
             margin-right: 2rem;
+            border-radius: 5rem;
           }
         }
       }

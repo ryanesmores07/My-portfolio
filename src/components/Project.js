@@ -28,6 +28,7 @@ const query = graphql`
 const Project = () => {
   const data = useStaticQuery(query)
   const projects = data.info.nodes
+
   return (
     <Wrapper>
       <article className=" container">
@@ -56,7 +57,6 @@ const Project = () => {
 
 const Wrapper = styled.article`
   width: 100%;
-  overflow: hidden;
 
   a {
     color: var(--clr-black);
@@ -64,7 +64,7 @@ const Wrapper = styled.article`
 
   .content {
     box-shadow: 0 0.125rem 1.25rem 0 rgba(0, 0, 0, 0.3);
-    transition: transform 150ms ease;
+    transition: transform 100ms ease-out;
   }
 
   .container {

@@ -31,7 +31,6 @@ const Wrapper = styled.aside`
     height: 8rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
-    /* border: 3px solid var(--clr-black); */
     z-index: 50;
   }
 
@@ -70,8 +69,6 @@ const Wrapper = styled.aside`
       top: 0rem;
       right: -100%;
 
-      /* transform: translateX(-10rem); */
-
       height: 100%;
       padding: 7rem 10rem 7rem 7rem;
 
@@ -80,7 +77,6 @@ const Wrapper = styled.aside`
 
       li {
         color: var(--clr-black);
-        /* background-color: red; */
         line-height: 2;
         font-size: 3.5rem;
         font-weight: 300;
@@ -94,7 +90,6 @@ const Wrapper = styled.aside`
       }
     }
     .sidebar.show {
-      /* transform: translateX(0); */
       right: 0;
       transition: all 0.5s ease-in-out;
     }

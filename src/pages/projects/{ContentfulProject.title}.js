@@ -122,13 +122,12 @@ const Wrapper = styled.main`
       }
 
       .content {
-        padding: 2rem 1rem;
+        padding: 3rem 2rem;
         background-color: var(--clr-white);
         box-shadow: var(--dark-shadow);
         z-index: 5;
 
         .title {
-          margin-bottom: 0.8rem;
           text-transform: uppercase;
           letter-spacing: 0.1rem;
           margin-bottom: 1rem;
@@ -153,7 +152,7 @@ const Wrapper = styled.main`
           padding: 0rem 0.5rem;
           letter-spacing: 0.1rem;
           text-transform: uppercase;
-          border-radius: 1px;
+          border-radius: 2px;
 
           background-color: var(--clr-grey-8);
         }
@@ -209,7 +208,7 @@ const Wrapper = styled.main`
           }
 
           .stack span {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
           }
         }
