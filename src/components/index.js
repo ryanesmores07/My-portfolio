@@ -6,5 +6,16 @@ import Project from "./Project"
 import Hamburger from "./Hamburger"
 import HeroNew from "./HeroNew"
 import Services from "./Services"
+import SelectedProjects from "./SelectedProjects"
 
-export { Footer, Navbar, Sidebar, Hero, Project, Hamburger, HeroNew, Services }
+export {
+  Footer,
+  Navbar,
+  Sidebar,
+  Hero,
+  Project,
+  Hamburger,
+  HeroNew,
+  Services,
+  SelectedProjects,
+}
