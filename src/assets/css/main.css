@@ -54,6 +54,7 @@ html {
   }
 } */
 body {
+  /* background-color: black; */
   font-family: var(--ff-primary);
   color: var(--color-black);
   font-weight: 300;
