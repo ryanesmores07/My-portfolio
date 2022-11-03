@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { HiOutlineArrowRight } from "react-icons/hi"
+import ProjectList from "./ProjectList"
 
 const query = graphql`
   {
@@ -42,36 +43,7 @@ const SelectedProjects = () => {
           feel were the most challenging yet rewarding.
         </p>
       </div>
-
-      {projects.map((project, index) => {
-        const { title, slug, description, image, github, url, content } =
-          project
-
-        console.log(content.stack)
-        return (
-          <div className="projects-container" key={index}>
-            <Link to={`/projects/${slug}`}>
-              <GatsbyImage
-                image={getImage(image)}
-                alt={title}
-                className="image"
-              />
-              {content.stack.map(i => {
-                return <h4 className="stacks">{i}</h4>
-              })}
-
-              <h3 className="title">{title}</h3>
-
-              <div className="button-container">
-                <a href="/" className="btn">
-                  VIEW PROJECT
-                </a>
-                <HiOutlineArrowRight className="arrow" />
-              </div>
-            </Link>
-          </div>
-        )
-      })}
+      <ProjectList projects={projects} />
       <div className="viewall-container">
         <Link to="/">View All Projects</Link>
         <div className="icon-bg">

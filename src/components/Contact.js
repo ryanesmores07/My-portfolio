@@ -12,13 +12,13 @@ const Contact = () => {
           Let's work <span className="text-gradient">together</span>
         </h1>
         <p>
-          I'm Ernie Ryan— a designer who works with startups looking to push
-          creative boundaries
+          I'm Ernie Ryan— a developer who works with startups looking to push
+          creative boundaries Working with startups
         </p>
       </div>
 
       <div className="button-container">
-        <Link to="/">Book Free Call</Link>
+        <Link to="/">Book FREE Call</Link>
         <div className="icon-bg">
           <HiOutlineArrowRight className="arrow" />
         </div>
@@ -73,7 +73,7 @@ const Wrapper = styled.section`
       height: 4.5rem;
       border-radius: 50%;
       position: absolute;
-      right: 11.3rem;
+      right: 10.5rem;
       .arrow {
         color: black;
         width: 2rem;

@@ -35,8 +35,9 @@ const Wrapper = styled.nav`
   background-color: black;
   width: 100%;
   z-index: 10;
-  top: 0px;
+  top: 0;
   transition: top 0.6s ease 0s;
+  /* position: sticky; */
 
   .container {
     margin: 0 auto;

@@ -12,7 +12,7 @@ const data = [
   {
     id: 3,
     text: "Projects",
-    url: "#projects",
+    url: "/projects",
   },
   {
     id: 4,
@@ -22,7 +22,7 @@ const data = [
   {
     id: 5,
     text: "Contact",
-    url: "#contact",
+    url: "/contact",
   },
 ]
 

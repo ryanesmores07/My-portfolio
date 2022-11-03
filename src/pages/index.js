@@ -19,7 +19,6 @@ export default function Home() {
       <SelectedProjects />
       <About />
       <Contact />
-      <FooterNew />
     </div>
   )
 }

@@ -9,15 +9,18 @@ const About = () => {
       <div className="text-container" id="about">
         <h2 className="name">ERNIE RYAN</h2>
         <p>
-          Leverage agile frameworks to provide a robust synopsis for high level
-          overviews. Iterative approaches to corporate strategy foster
-          collaborative thinking to further the overall value proposition.
-          Organically grow the holistic world view
+          Front-end / eCommerce developer based in Tokyo, Japan. I love building
+          and designing responsive websites.
         </p>
+        <div className="blockquote-container">
+          <div className="blockquote">
+            <q>You can do anything you set your mind to.</q>
+            <span> - Eminem</span>
+          </div>
+        </div>
         <p>
-          Bring to the table win-win survival strategies to ensure proactive
-          domination. At the end of the day, going forward, a new normal that
-          has evolved from generation X is on the runway heading towards.
+          What is your challenge? I can help you with your eCommerce website and
+          solve the problems that hinders the growth of your business!
         </p>
       </div>
       <div className="image-section">
@@ -61,6 +64,27 @@ const Wrapper = styled.section`
       font-size: 1.8rem;
       line-height: 1.5;
       color: black;
+    }
+  }
+
+  .blockquote-container {
+    display: flex;
+    margin-left: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    justify-content: flex-start;
+    /* align-items: center; */
+    width: 70%;
+    border-left: 0.5rem solid steelblue;
+    padding-left: 1rem;
+
+    q {
+      font-size: 2rem;
+      line-height: 0.8;
+    }
+
+    span {
+      font-size: 2rem;
     }
   }
 

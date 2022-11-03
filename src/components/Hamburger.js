@@ -65,39 +65,6 @@ const Wrapper = styled.aside`
     }
   }
 
-  .sidebar-container {
-    overflow: hidden;
-    .sidebar {
-      position: fixed;
-      top: 0rem;
-      right: -100%;
-
-      height: 100%;
-      padding: 7rem 10rem 7rem 7rem;
-
-      background-color: rgba(255, 255, 255, 0.9);
-      transition: all 0.5s ease-in-out;
-
-      li {
-        color: var(--clr-black);
-        line-height: 2;
-        font-size: 3.5rem;
-        font-weight: 300;
-
-        -webkit-text-stroke: 1.2px black;
-
-        &:hover {
-          color: black;
-          transition: var(--transition);
-        }
-      }
-    }
-    .sidebar.show {
-      right: 0;
-      transition: all 0.5s ease-in-out;
-    }
-  }
-
   /* ANIMATION */
 
   .menu-btn.open .menu-btn__burger {

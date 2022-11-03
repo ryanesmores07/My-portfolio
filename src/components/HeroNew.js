@@ -1,8 +1,8 @@
 import React from "react"
 import { HiOutlineArrowRight } from "react-icons/hi"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
 
 const HeroNew = () => {
   return (

@@ -11,8 +11,8 @@ const FooterNew = () => {
           <div className="icon-bg">
             <FiMail className="icon" />
           </div>
-          <a href="mailto:mytokyowebdev@ernieryan.com">
-            mytokyowebdev@ernieryan.com
+          <a href="mailto:mytokyowebdev@ernieryan.dev">
+            mytokyowebdev@ernieryan.dev
           </a>
         </div>
         <div className="emailphone">
@@ -125,7 +125,7 @@ const Wrapper = styled.footer`
     display: flex;
 
     h4 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 500;
       margin-bottom: 1.5rem;
       letter-spacing: 1px;
@@ -137,7 +137,7 @@ const Wrapper = styled.footer`
         margin-bottom: 1rem;
       }
       a {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         color: white;
       }
     }

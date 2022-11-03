@@ -10,6 +10,7 @@ import SelectedProjects from "./SelectedProjects"
 import About from "./About"
 import Contact from "./Contact"
 import FooterNew from "./FooterNew"
+import ProjectList from "./ProjectList"
 
 export {
   Footer,
@@ -24,4 +25,5 @@ export {
   About,
   Contact,
   FooterNew,
+  ProjectList,
 }
