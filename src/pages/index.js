@@ -6,6 +6,9 @@ import {
   HeroNew,
   Services,
   SelectedProjects,
+  About,
+  Contact,
+  FooterNew,
 } from "../components"
 
 export default function Home() {
@@ -14,6 +17,9 @@ export default function Home() {
       <HeroNew />
       <Services />
       <SelectedProjects />
+      <About />
+      <Contact />
+      <FooterNew />
     </div>
   )
 }

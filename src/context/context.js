@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import data from "../constants/links"
+import data from "../constants/linksNew"
 
 const GatsbyContext = React.createContext()
 

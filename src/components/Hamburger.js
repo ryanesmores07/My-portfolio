@@ -38,6 +38,7 @@ const Wrapper = styled.aside`
     width: 4rem;
     height: 3px;
     background: var(--clr-black);
+    background: var(--clr-white);
     border-radius: 5px;
     /* box-shadow: 0 2px 5px var(--clr-black); */
     transition: all 0.5s ease-in-out;
@@ -49,6 +50,8 @@ const Wrapper = styled.aside`
       width: 4rem;
       height: 3px;
       background: var(--clr-black);
+      background: var(--clr-white);
+
       border-radius: 5px;
       /* box-shadow: 0 2px 5px var(--clr-black); */
       transition: all 0.5s ease-in-out;

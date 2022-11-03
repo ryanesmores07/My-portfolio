@@ -2,13 +2,14 @@ import React from "react"
 import { HiOutlineArrowRight } from "react-icons/hi"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const HeroNew = () => {
   return (
     <Wrapper>
       <div className="container">
         <div className="text-container">
-          <h1 className="text-gradient">eCommerce Web developer</h1>
+          <h1 className="text-gradient">eCommerce Developer</h1>
           <h1>crafting products</h1>
           <h1>that people love</h1>
           <p>
@@ -16,12 +17,14 @@ const HeroNew = () => {
             push creative boundaries and create unique user experiences.
           </p>
 
-          <a className="btn" href="#">
-            Book a FREE Call
-            <span>
+          <div className="btn-container">
+            <Link className="btn" href="#">
+              Book a FREE Call
+            </Link>
+            <div className="icon-bg">
               <HiOutlineArrowRight className="arrow" />
-            </span>
-          </a>
+            </div>
+          </div>
         </div>
         <div className="image-container">
           <StaticImage
@@ -41,6 +44,7 @@ const Wrapper = styled.header`
   padding: 5rem 2rem;
   .text-gradient {
     background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -52,8 +56,8 @@ const Wrapper = styled.header`
     .text-container {
       margin-bottom: 3rem;
       h1 {
-        font-size: 6rem;
-        font-weight: 400;
+        font-size: 5rem;
+        font-weight: 700;
         line-height: 1.2;
       }
 
@@ -61,31 +65,46 @@ const Wrapper = styled.header`
         color: var(--clr-grey-10);
         margin: 3rem 0 5rem;
         font-size: 1.6rem;
+        font-family: var(--ff-satoshi);
+        font-weight: 400;
+        max-width: 95%;
       }
 
-      .btn {
-        background: linear-gradient(#bd10c3, #cd1590, #d2177e);
-        font-size: 1.8rem;
-        color: white;
-        padding: 1.5rem 3.5rem;
-        padding-right: 0;
-        border-radius: 50rem;
-        letter-spacing: 1px;
-        cursor: pointer;
+      .btn-container {
+        display: flex;
+        align-items: center;
+        position: relative;
 
-        span {
-          margin: 3px 2px 2px 3rem;
-          padding: inherit;
+        a {
+          background: linear-gradient(
+            to right,
+            #bd10c3,
+            #cd1590,
+            #d2177e,
+            #eb9fed
+          );
+          color: white;
+          border-radius: 50rem;
+          padding: 1.2rem 7rem 1.2rem 4rem;
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+        .icon-bg {
           background-color: white;
+          padding: 1rem;
+          width: 4.5rem;
+          height: 4.5rem;
           border-radius: 50%;
-
+          position: absolute;
+          right: 9.1rem;
           .arrow {
-            width: 2.4rem;
-            height: 2.4rem;
-            font-size: 1rem;
-
+            width: 2rem;
+            height: 2rem;
             color: black;
-            transform: translateX(-1.7rem) translateY(4px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
         }
       }

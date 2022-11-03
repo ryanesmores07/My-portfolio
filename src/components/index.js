@@ -7,6 +7,9 @@ import Hamburger from "./Hamburger"
 import HeroNew from "./HeroNew"
 import Services from "./Services"
 import SelectedProjects from "./SelectedProjects"
+import About from "./About"
+import Contact from "./Contact"
+import FooterNew from "./FooterNew"
 
 export {
   Footer,
@@ -18,4 +21,7 @@ export {
   HeroNew,
   Services,
   SelectedProjects,
+  About,
+  Contact,
+  FooterNew,
 }

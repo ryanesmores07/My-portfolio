@@ -14,7 +14,8 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  background-color: #1f1f1f;
   height: 100%;
   padding: 7rem 10rem 7rem 7rem;
   /* transform: translateX(100%); */
@@ -22,14 +23,14 @@
 }
 
 .li {
-  color: var(--clr-black);
+  color: var(--clr-white);
   /* background-color: red; */
   line-height: 2;
   /* font-size: 2rem; */
   font-size: 5rem;
   font-weight: 300;
 
-  -webkit-text-stroke: 1.2px black;
+  /* -webkit-text-stroke: 1.2px black; */
 }
 
 .li:hover {

@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link to="/" onClick={() => hideSidebar()}>
             <StaticImage
               className="logo"
-              src="../../static/LogoMakr.png"
+              src="../../static/ryanlogowhite.png"
               alt="logo"
             />
           </Link>
@@ -32,8 +32,7 @@ const Navbar = () => {
 }
 
 const Wrapper = styled.nav`
-  /* background-color: pink; */
-  position: sticky;
+  background-color: black;
   width: 100%;
   z-index: 10;
   top: 0px;

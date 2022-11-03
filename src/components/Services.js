@@ -5,7 +5,7 @@ import ServicesList from "./ServicesList"
 const Services = () => {
   return (
     <Wrapper>
-      <div className="text-container">
+      <div className="text-container" id="services">
         <h2>
           Look at my <span className="text-gradient">services</span>
         </h2>
@@ -28,6 +28,7 @@ const Wrapper = styled.section`
 
   .text-gradient {
     background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e, #fff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
