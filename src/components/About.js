@@ -12,16 +12,16 @@ const About = () => {
           Front-end / eCommerce developer based in Tokyo, Japan. I love building
           and designing responsive websites.
         </p>
+        <p>
+          What is your challenge? I can help you with your eCommerce website and
+          solve the problems that hinders the growth of your business!
+        </p>
         <div className="blockquote-container">
           <div className="blockquote">
             <q>You can do anything you set your mind to.</q>
             <span> - Eminem</span>
           </div>
         </div>
-        <p>
-          What is your challenge? I can help you with your eCommerce website and
-          solve the problems that hinders the growth of your business!
-        </p>
       </div>
       <div className="image-section">
         <StaticImage
@@ -52,6 +52,7 @@ const About = () => {
 const Wrapper = styled.section`
   padding: 8rem 2rem;
   /* background-color: var(--clr-grey-9); */
+  overflow: hidden;
   .text-container {
     margin-bottom: 15rem;
     .name {
@@ -65,26 +66,25 @@ const Wrapper = styled.section`
       line-height: 1.5;
       color: black;
     }
-  }
+    .blockquote-container {
+      display: flex;
+      margin-left: 3rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      justify-content: flex-start;
+      /* align-items: center; */
+      width: 70%;
+      border-left: 0.5rem solid steelblue;
+      padding-left: 1rem;
 
-  .blockquote-container {
-    display: flex;
-    margin-left: 3rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    justify-content: flex-start;
-    /* align-items: center; */
-    width: 70%;
-    border-left: 0.5rem solid steelblue;
-    padding-left: 1rem;
+      q {
+        font-size: 2rem;
+        line-height: 0.8;
+      }
 
-    q {
-      font-size: 2rem;
-      line-height: 0.8;
-    }
-
-    span {
-      font-size: 2rem;
+      span {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -106,6 +106,7 @@ const Wrapper = styled.section`
     .photo {
       border: 3px solid #fff;
       height: 45rem;
+      width: 100%;
     }
     .photo-1 {
       transform: rotate(-15deg);
@@ -122,6 +123,40 @@ const Wrapper = styled.section`
     .photo-4 {
       transform: rotate(15deg);
       z-index: 1;
+    }
+  }
+
+  @media (min-width: 1164px) {
+    padding: 12rem 5rem 17rem;
+    .text-container {
+      gap: 3rem;
+      display: flex;
+      .name {
+        margin-right: 5rem;
+      }
+    }
+    .image-section {
+      padding: 0 4rem;
+      display: flex;
+      .photo {
+        height: 38rem;
+      }
+      .photo-1 {
+        transform: rotate(-10deg);
+        z-index: -3;
+      }
+      .photo-2 {
+        transform: rotate(15deg);
+        z-index: -2;
+      }
+      .photo-3 {
+        transform: rotate(-1deg);
+        z-index: -3;
+      }
+      .photo-4 {
+        transform: rotate(-15deg);
+        z-index: -4;
+      }
     }
   }
 `

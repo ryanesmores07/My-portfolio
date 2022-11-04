@@ -55,8 +55,8 @@ const SelectedProjects = () => {
 }
 
 const Wrapper = styled.article`
-  background-color: var(--clr-grey-10);
-  color: black;
+  background-color: black;
+  color: white;
   padding: 8rem 2rem;
 
   .text-gradient {
@@ -75,7 +75,7 @@ const Wrapper = styled.article`
     }
     p {
       font-size: 1.8rem;
-      color: var(--clr-black);
+      color: var(--clr-grey-9);
       width: 95%;
       margin-bottom: 7rem;
     }
@@ -107,59 +107,40 @@ const Wrapper = styled.article`
         width: 2rem;
         height: 2rem;
         position: absolute;
+        color: black;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
     }
   }
-  .projects-container {
-    padding: 2rem;
-    background-color: #fff;
-    margin-bottom: 4rem;
-    .image {
-      margin-bottom: 2rem;
-    }
-    .stacks {
-      display: inline-block;
-      color: black;
-      margin-right: 1rem;
-      background-color: var(--clr-grey-10);
-      font-size: 1.2rem;
-      border-radius: 50rem;
-      padding: 0.3rem 1rem;
-      margin-bottom: 2rem;
-    }
 
-    .title {
-      font-size: 2.4rem;
-      font-weight: 600;
-      color: black;
-      margin-bottom: 2rem;
-    }
-    .button-container {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      .btn {
-        color: black;
-        font-size: 1.4rem;
-        letter-spacing: 1px;
+  @media (min-width: 1164px) {
+    padding: 15rem 5rem 32rem;
+    position: relative;
+
+    .text-container {
+      h2 {
+        font-size: 6rem;
         font-weight: 500;
       }
-      .arrow {
-        background: linear-gradient(
-          to right,
-          #bd10c3,
-          #cd1590,
-          #d2177e,
-          #eb9fed
-        );
-        border-radius: 50%;
-        color: white;
-        padding: 0.5rem;
-        width: 2.5rem;
-        height: 2.5rem;
+      p {
+        font-size: 1.8rem;
+        color: var(--clr-grey-9);
+        max-width: 45%;
+      }
+    }
+    .viewall-container {
+      position: absolute;
+      right: 19rem;
+      bottom: 12rem;
+      a {
+      }
+      .icon-bg {
+        right: 0.3rem;
+
+        .second-arrow {
+        }
       }
     }
   }

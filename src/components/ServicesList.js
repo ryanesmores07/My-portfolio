@@ -80,6 +80,14 @@ const Wrapper = styled.article`
       font-size: 1.4rem;
     }
   }
+  @media (min-width: 1164px) {
+    flex-direction: row;
+    justify-content: center;
+    .container {
+      width: 30%;
+      height: 20%;
+    }
+  }
 `
 
 export default ServicesList

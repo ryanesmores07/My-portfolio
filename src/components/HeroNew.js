@@ -62,7 +62,7 @@ const Wrapper = styled.header`
       }
 
       p {
-        color: var(--clr-grey-10);
+        color: var(--clr-grey-9);
         margin: 3rem 0 5rem;
         font-size: 1.6rem;
         font-family: var(--ff-satoshi);
@@ -127,6 +127,48 @@ const Wrapper = styled.header`
 
       .photo {
         width: 90%;
+      }
+    }
+  }
+
+  @media (min-width: 1164px) {
+    padding: 8rem 3.5rem;
+
+    .container {
+      flex-direction: row;
+      .text-container {
+        width: 60%;
+        h1 {
+          font-size: 7rem;
+          font-weight: 500;
+        }
+        p {
+          max-width: 80%;
+        }
+        .btn-container {
+          a {
+          }
+          .icon-bg {
+            left: 20rem;
+            .arrow {
+            }
+          }
+        }
+      }
+      .image-container {
+        max-width: 40%;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+
+        .photo {
+          height: 100%;
+        }
       }
     }
   }

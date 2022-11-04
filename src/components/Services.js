@@ -43,9 +43,27 @@ const Wrapper = styled.section`
 
     p {
       font-size: 1.6rem;
-      color: var(--clr-grey-10);
+      color: var(--clr-grey-9);
       width: 95%;
       margin-bottom: 7rem;
+    }
+  }
+  @media (min-width: 1164px) {
+    .text-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: 6.4rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.8rem;
+        max-width: 50%;
+      }
     }
   }
 `
