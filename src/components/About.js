@@ -6,16 +6,19 @@ import { StaticImage } from "gatsby-plugin-image"
 const About = () => {
   return (
     <Wrapper>
-      <div className="text-container" id="about">
+      <div className="text-container" id="About">
         <h2 className="name">ERNIE RYAN</h2>
-        <p>
-          Front-end / eCommerce developer based in Tokyo, Japan. I love building
-          and designing responsive websites.
-        </p>
-        <p>
-          What is your challenge? I can help you with your eCommerce website and
-          solve the problems that hinders the growth of your business!
-        </p>
+        <div className="paragraph-container">
+          <p>
+            Front-end / eCommerce developer based in Tokyo, Japan. I love
+            building and designing responsive websites.
+          </p>
+          <p>
+            What is your challenge? I can help you with your eCommerce website
+            and solve the problems that hinders the growth of your business!
+          </p>
+        </div>
+
         <div className="blockquote-container">
           <div className="blockquote">
             <q>You can do anything you set your mind to.</q>
@@ -24,26 +27,30 @@ const About = () => {
         </div>
       </div>
       <div className="image-section">
-        <StaticImage
-          className="photo photo-1"
-          src="../assets/images/About-images/img4.jpg"
-          alt="my-photo"
-        />
-        <StaticImage
-          className="photo photo-2"
-          src="../assets/images/About-images/img2.jpg"
-          alt="my-photo"
-        />
-        <StaticImage
-          className="photo photo-3"
-          src="../assets/images/About-images/img3.jpg"
-          alt="my-photo"
-        />
-        <StaticImage
-          className="photo photo-4"
-          src="../assets/images/About-images/img1.JPG"
-          alt="my-photo"
-        />
+        <div className="section-1">
+          <StaticImage
+            className="photo photo-1"
+            src="../assets/images/About-images/img4.jpg"
+            alt="my-photo"
+          />
+          <StaticImage
+            className="photo photo-2"
+            src="../assets/images/About-images/img2.jpg"
+            alt="my-photo"
+          />
+        </div>
+        <div className="section-2">
+          <StaticImage
+            className="photo photo-3"
+            src="../assets/images/About-images/img3.jpg"
+            alt="my-photo"
+          />
+          <StaticImage
+            className="photo photo-4"
+            src="../assets/images/About-images/img1.JPG"
+            alt="my-photo"
+          />
+        </div>
       </div>
     </Wrapper>
   )
@@ -126,6 +133,50 @@ const Wrapper = styled.section`
     }
   }
 
+  @media (min-width: 768px) {
+    padding: 12rem 4rem 12rem;
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .name {
+        margin-left: -0.5rem;
+      }
+      .paragraph-container {
+        display: flex;
+        gap: 5rem;
+        /* justify-content: space-around; */
+        & > * {
+          width: 45%;
+        }
+      }
+    }
+    .image-section {
+      display: flex;
+      .section-1 {
+        .photo-1 {
+          transform: rotate(-10deg);
+          z-index: -3;
+        }
+        .photo-2 {
+          transform: rotate(15deg) translateY(-7rem);
+          z-index: -2;
+        }
+      }
+      .section-2 {
+        .photo-3 {
+          transform: rotate(7deg);
+          z-index: -3;
+        }
+        .photo-4 {
+          transform: rotate(-15deg) translateY(-5rem);
+          z-index: -1;
+        }
+      }
+    }
+  }
+
   @media (min-width: 1164px) {
     padding: 12rem 5rem 17rem;
     .text-container {
@@ -140,22 +191,32 @@ const Wrapper = styled.section`
       display: flex;
       .photo {
         height: 38rem;
+        width: 100%;
       }
-      .photo-1 {
-        transform: rotate(-10deg);
-        z-index: -3;
+      .section-1,
+      .section-2 {
+        display: flex;
+        width: 100%;
       }
-      .photo-2 {
-        transform: rotate(15deg);
-        z-index: -2;
+      .section-1 {
+        .photo-1 {
+          transform: rotate(-10deg);
+          z-index: -3;
+        }
+        .photo-2 {
+          transform: rotate(15deg);
+          z-index: -2;
+        }
       }
-      .photo-3 {
-        transform: rotate(-1deg);
-        z-index: -3;
-      }
-      .photo-4 {
-        transform: rotate(-15deg);
-        z-index: -4;
+      .section-2 {
+        .photo-3 {
+          transform: rotate(-1deg);
+          z-index: -3;
+        }
+        .photo-4 {
+          transform: rotate(-15deg);
+          z-index: -4;
+        }
       }
     }
   }

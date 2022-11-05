@@ -17,7 +17,6 @@ const Projects = ({
             Frontend designs and
             <span className="text-gradient"> Projects</span>
           </h1>
-          <p></p>
         </div>
         <ProjectList projects={datas} />
       </Wrapper>
@@ -69,6 +68,19 @@ const Wrapper = styled.section`
     }
     p {
       color: white;
+    }
+  }
+  @media (min-width: 1164px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container {
+      h1 {
+        font-size: 6rem;
+        max-width: 14ch;
+      }
+      margin-bottom: 13rem;
     }
   }
 `

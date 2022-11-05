@@ -73,7 +73,7 @@ const Wrapper = styled.header`
       .btn-container {
         display: flex;
         align-items: center;
-        position: relative;
+        position: absolute;
 
         a {
           background: linear-gradient(
@@ -96,7 +96,7 @@ const Wrapper = styled.header`
           height: 4.5rem;
           border-radius: 50%;
           position: absolute;
-          right: 9.1rem;
+          right: 0.3rem;
           .arrow {
             width: 2rem;
             height: 2rem;
@@ -127,6 +127,31 @@ const Wrapper = styled.header`
 
       .photo {
         width: 90%;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      .text-container {
+        margin-bottom: 7rem;
+        h1 {
+          font-size: 6rem;
+          width: 70%;
+          font-weight: 500;
+          line-height: 1.1;
+        }
+        p {
+          max-width: 65%;
+        }
+      }
+      .image-container {
+        text-align: center;
+        width: 60%;
+
+        .photo {
+          /* width: 70%; */
+        }
       }
     }
   }

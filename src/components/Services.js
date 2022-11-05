@@ -5,7 +5,7 @@ import ServicesList from "./ServicesList"
 const Services = () => {
   return (
     <Wrapper>
-      <div className="text-container" id="services">
+      <div className="text-container" id="Services">
         <h2>
           Look at my <span className="text-gradient">services</span>
         </h2>
@@ -48,6 +48,17 @@ const Wrapper = styled.section`
       margin-bottom: 7rem;
     }
   }
+  @media (min-width: 768px) {
+    .text-container {
+      h2 {
+        font-size: 6rem;
+        font-weight: 500;
+      }
+      p {
+        max-width: 70%;
+      }
+    }
+  }
   @media (min-width: 1164px) {
     .text-container {
       text-align: center;
@@ -57,7 +68,6 @@ const Wrapper = styled.section`
 
       h2 {
         font-size: 6.4rem;
-        font-weight: 500;
       }
 
       p {

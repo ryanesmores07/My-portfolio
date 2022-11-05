@@ -52,7 +52,7 @@ const Wrapper = styled.section`
     .button-container {
       display: flex;
       align-items: center;
-      position: relative;
+      position: absolute;
 
       a {
         background: linear-gradient(
@@ -76,7 +76,7 @@ const Wrapper = styled.section`
         height: 4.5rem;
         border-radius: 50%;
         position: absolute;
-        right: 10.5rem;
+        right: 0.3rem;
         .arrow {
           color: black;
           width: 2rem;
@@ -90,6 +90,26 @@ const Wrapper = styled.section`
     }
   }
 
+  @media (min-width: 768px) {
+    padding: 8rem 4rem 15rem;
+
+    .text-container {
+      h1 {
+        font-size: 6rem;
+        font-weight: 500;
+        width: 80%;
+        margin-bottom: 0;
+      }
+      p {
+        width: 70%;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+      }
+      .button-container {
+      }
+    }
+  }
+
   @media (min-width: 1164px) {
     .text-container {
       display: flex;
@@ -97,13 +117,14 @@ const Wrapper = styled.section`
       align-items: center;
       h1 {
         line-height: 0.8;
-        font-weight: 6rem;
+        font-weight: 500;
       }
       p {
         max-width: 45%;
         text-align: center;
       }
       .button-container {
+        position: relative;
         .icon-bg {
           right: 0.3rem;
         }

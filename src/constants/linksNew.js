@@ -7,17 +7,17 @@ const data = [
   {
     id: 2,
     text: "Services",
-    url: "#services",
+    url: "#Services",
   },
   {
     id: 3,
     text: "Projects",
-    url: "/projects",
+    url: "/Projects",
   },
   {
     id: 4,
     text: "About Me",
-    url: "#about",
+    url: "#About",
   },
   {
     id: 5,

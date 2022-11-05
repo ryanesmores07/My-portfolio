@@ -84,7 +84,7 @@ const Wrapper = styled.article`
   .viewall-container {
     display: flex;
     align-items: center;
-    position: relative;
+    position: absolute;
 
     a {
       background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e, #eb9fed);
@@ -102,7 +102,7 @@ const Wrapper = styled.article`
       height: 4.5rem;
       border-radius: 50%;
       position: absolute;
-      right: 9.7rem;
+      right: 0.3rem;
       .second-arrow {
         width: 2rem;
         height: 2rem;
@@ -115,10 +115,8 @@ const Wrapper = styled.article`
     }
   }
 
-  @media (min-width: 1164px) {
-    padding: 15rem 5rem 32rem;
-    position: relative;
-
+  @media (min-width: 768px) {
+    padding: 15rem 4rem;
     .text-container {
       h2 {
         font-size: 6rem;
@@ -126,7 +124,18 @@ const Wrapper = styled.article`
       }
       p {
         font-size: 1.8rem;
-        color: var(--clr-grey-9);
+        max-width: 70%;
+      }
+    }
+  }
+  @media (min-width: 1164px) {
+    padding: 15rem 5rem 32rem;
+    position: relative;
+
+    .text-container {
+      h2 {
+      }
+      p {
         max-width: 45%;
       }
     }

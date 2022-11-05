@@ -147,6 +147,19 @@ const Wrapper = styled.footer`
     }
   }
 
+  @media (min-width: 768px) {
+    padding: 8rem 4rem;
+    .container {
+      .contact-container {
+        .emailphone {
+          a {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
   @media (min-width: 1164px) {
     padding: 12rem 5rem;
     .container {
@@ -155,9 +168,11 @@ const Wrapper = styled.footer`
       gap: 10rem;
       .contact-container {
         width: 40%;
+        &::before {
+          display: none;
+        }
         .emailphone {
           a {
-            font-size: 2.5rem;
           }
         }
       }

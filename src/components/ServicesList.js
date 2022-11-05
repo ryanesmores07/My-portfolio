@@ -80,12 +80,16 @@ const Wrapper = styled.article`
       font-size: 1.4rem;
     }
   }
-  @media (min-width: 1164px) {
+  @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
     .container {
-      width: 30%;
       height: 20%;
+    }
+  }
+  @media (min-width: 1164px) {
+    .container {
+      width: 30%;
     }
   }
 `

@@ -93,6 +93,13 @@ const Wrapper = styled.article`
       }
     }
   }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 80%;
+    }
+  }
+
   @media (min-width: 1164px) {
     .container {
       display: grid;
