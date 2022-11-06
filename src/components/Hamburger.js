@@ -83,6 +83,10 @@ const Wrapper = styled.aside`
     transform: rotate(-45deg) translate(35px, 35px);
     transition: var(--transition);
   }
+
+  @media (min-width: 1164px) {
+    display: none;
+  }
 `
 
 export default Hamburger

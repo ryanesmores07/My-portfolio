@@ -12,7 +12,7 @@ const data = [
   {
     id: 3,
     text: "Projects",
-    url: "/Projects",
+    url: "/projects",
   },
   {
     id: 4,

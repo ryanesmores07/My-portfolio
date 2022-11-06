@@ -111,6 +111,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 1164px) {
+    text-align: center;
     .text-container {
       display: flex;
       flex-direction: column;

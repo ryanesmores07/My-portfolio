@@ -97,6 +97,9 @@ const Wrapper = styled.section`
 
   .image-section {
     position: relative;
+    background-color: inherit;
+    margin-top: 10rem;
+    isolation: isolate;
 
     &::before {
       content: "";
@@ -107,9 +110,7 @@ const Wrapper = styled.section`
       top: -10rem;
       background-color: black;
     }
-    background-color: inherit;
-    margin-top: 10rem;
-    isolation: isolate;
+
     .photo {
       border: 3px solid #fff;
       height: 45rem;
@@ -135,6 +136,9 @@ const Wrapper = styled.section`
 
   @media (min-width: 768px) {
     padding: 12rem 4rem 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .text-container {
       display: flex;
@@ -153,7 +157,9 @@ const Wrapper = styled.section`
       }
     }
     .image-section {
+      width: 90%;
       display: flex;
+      justify-content: center;
       .section-1 {
         .photo-1 {
           transform: rotate(-10deg);
@@ -190,7 +196,7 @@ const Wrapper = styled.section`
       padding: 0 4rem;
       display: flex;
       .photo {
-        height: 38rem;
+        height: 30rem;
         width: 100%;
       }
       .section-1,

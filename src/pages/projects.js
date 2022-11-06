@@ -76,6 +76,7 @@ const Wrapper = styled.section`
     align-items: center;
 
     .container {
+      margin: 0 auto;
       h1 {
         font-size: 6rem;
         max-width: 14ch;

@@ -19,8 +19,12 @@ const ProjectList = ({ projects }) => {
                   alt={title}
                   className="image"
                 />
-                {content.stack.map(i => {
-                  return <h4 className="stacks">{i}</h4>
+                {content.stack.map((i, index) => {
+                  return (
+                    <h4 key={index} className="stacks">
+                      {i}
+                    </h4>
+                  )
                 })}
 
                 <h3 className="title">{title}</h3>
@@ -102,6 +106,8 @@ const Wrapper = styled.article`
 
   @media (min-width: 1164px) {
     .container {
+      width: 100%;
+
       display: grid;
       gap: 4rem;
       grid-template-columns: 1fr 1fr;

@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { FiMail } from "react-icons/fi"
 import { BsTelephone } from "react-icons/bs"
 import { HiOutlineArrowRight } from "react-icons/hi"
-import { Link } from "gatsby"
 
 const ContactPage = () => {
   return (

@@ -132,6 +132,8 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 768px) {
+    padding: 8rem 4rem 15rem;
+
     .container {
       .text-container {
         margin-bottom: 7rem;
@@ -157,7 +159,7 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 1164px) {
-    padding: 8rem 3.5rem;
+    padding: 8rem 5rem 20rem;
 
     .container {
       flex-direction: row;
@@ -165,7 +167,7 @@ const Wrapper = styled.header`
         width: 60%;
         h1 {
           font-size: 7rem;
-          font-weight: 500;
+          font-weight: 900;
         }
         p {
           max-width: 80%;

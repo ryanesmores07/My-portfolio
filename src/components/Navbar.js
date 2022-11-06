@@ -9,11 +9,11 @@ import { GatsbyContext } from "../context/context"
 import { Hamburger } from "../components"
 
 const Navbar = () => {
-  const { hideSidebar } = useContext(GatsbyContext)
+  const { hideSidebar, links } = useContext(GatsbyContext)
 
   return (
     <Wrapper>
-      <nav className="container">
+      <div className="container">
         <div className="logo">
           <Link to="/" onClick={() => hideSidebar()}>
             <StaticImage
@@ -23,10 +23,21 @@ const Navbar = () => {
             />
           </Link>
         </div>
+        <div className="links">
+          <ul>
+            {links.map(link => {
+              return (
+                <li>
+                  <Link to={link.url}>{link.text}</Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
         <div role="button" className="burger-button">
           <Hamburger />
         </div>
-      </nav>
+      </div>
     </Wrapper>
   )
 }
@@ -46,10 +57,38 @@ const Wrapper = styled.nav`
     justify-content: space-between;
     /* width: 90%; */
     padding: 3rem 4rem;
+    .logo {
+      max-width: 10rem;
+    }
+    .links {
+      display: none;
+    }
   }
-
-  .logo {
-    max-width: 10rem;
+  @media (min-width: 1164px) {
+    .container {
+      .links {
+        display: block;
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 3rem;
+          cursor: pointer;
+          li {
+            &:last-child {
+              background-color: #191919;
+              border-radius: 50rem;
+              padding: 0.5rem 3rem;
+              position: absolute;
+              right: 10rem;
+              font-weight: 500;
+            }
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
   }
 `
 

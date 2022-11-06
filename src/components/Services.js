@@ -49,6 +49,8 @@ const Wrapper = styled.section`
     }
   }
   @media (min-width: 768px) {
+    padding: 5rem 4rem;
+
     .text-container {
       h2 {
         font-size: 6rem;
