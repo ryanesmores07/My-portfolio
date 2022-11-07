@@ -153,6 +153,24 @@ const Wrapper = styled.article`
       }
     }
   }
+  @media (min-width: 1440px) {
+    padding: 15rem 10rem 32rem;
+
+    .text-container {
+      h2 {
+      }
+      p {
+      }
+    }
+    .viewall-container {
+      a {
+      }
+      .icon-bg {
+        .second-arrow {
+        }
+      }
+    }
+  }
 `
 
 export default SelectedProjects

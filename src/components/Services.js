@@ -78,6 +78,23 @@ const Wrapper = styled.section`
       }
     }
   }
+  @media (min-width: 1440px) {
+    .text-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: 6.4rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        max-width: 40%;
+      }
+    }
+  }
 `
 
 export default Services

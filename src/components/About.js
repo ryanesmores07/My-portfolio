@@ -188,8 +188,11 @@ const Wrapper = styled.section`
     .text-container {
       gap: 3rem;
       display: flex;
+      flex-direction: row;
       .name {
         margin-right: 5rem;
+      }
+      .paragraph-container {
       }
     }
     .image-section {
@@ -222,6 +225,34 @@ const Wrapper = styled.section`
         .photo-4 {
           transform: rotate(-15deg);
           z-index: -4;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 12rem 10rem 17rem;
+    .text-container {
+      .name {
+      }
+    }
+    .image-section {
+      .photo {
+        height: 35rem;
+      }
+      .section-1,
+      .section-2 {
+      }
+      .section-1 {
+        .photo-1 {
+        }
+        .photo-2 {
+        }
+      }
+      .section-2 {
+        .photo-3 {
+        }
+        .photo-4 {
         }
       }
     }

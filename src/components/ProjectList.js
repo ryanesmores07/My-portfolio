@@ -107,7 +107,6 @@ const Wrapper = styled.article`
   @media (min-width: 1164px) {
     .container {
       width: 100%;
-
       display: grid;
       gap: 4rem;
       grid-template-columns: 1fr 1fr;
@@ -134,6 +133,12 @@ const Wrapper = styled.article`
         grid-column: 1 / 2;
         grid-row: 9 / span 2;
       }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .container {
+      gap: 5rem;
     }
   }
 `

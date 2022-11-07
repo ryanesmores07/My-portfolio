@@ -92,6 +92,11 @@ const Wrapper = styled.article`
       width: 30%;
     }
   }
+  @media (min-width: 1440px) {
+    .container {
+      width: 25%;
+    }
+  }
 `
 
 export default ServicesList

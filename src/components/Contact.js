@@ -117,7 +117,7 @@ const Wrapper = styled.section`
       flex-direction: column;
       align-items: center;
       h1 {
-        line-height: 0.8;
+        line-height: 1.1;
         font-weight: 500;
       }
       p {
@@ -128,6 +128,21 @@ const Wrapper = styled.section`
         position: relative;
         .icon-bg {
           right: 0.3rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 8rem 4rem 15rem;
+
+    .text-container {
+      h1 {
+      }
+      p {
+      }
+      .button-container {
+        .icon-bg {
         }
       }
     }
