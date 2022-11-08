@@ -172,6 +172,7 @@ const Wrapper = styled.section`
           outline: 0;
         }
         .btn-container {
+          cursor: pointer;
           display: flex;
           align-items: center;
           position: relative;
