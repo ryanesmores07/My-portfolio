@@ -201,7 +201,7 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 1440px) {
-    padding: 8rem 35rem 20rem;
+    padding: 8rem 10rem 20rem;
 
     .container {
       .text-container {
