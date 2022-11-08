@@ -1,11 +1,21 @@
 import React from "react"
 
-import { Hero, Project } from "../components"
+import {
+  HeroNew,
+  Services,
+  SelectedProjects,
+  About,
+  Contact,
+} from "../components"
+
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <Project />
+      <HeroNew />
+      <Services />
+      <SelectedProjects />
+      <About />
+      <Contact />
     </div>
   )
 }

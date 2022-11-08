@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import { AiOutlineLeft } from "react-icons/ai"
 
+import Contact from "../../components/Contact"
 const ProjectTemplate = ({
   pageContext: { title: projectTitle },
   data: { info: datas },
@@ -50,6 +51,7 @@ const ProjectTemplate = ({
           </section>
         </div>
       </div>
+      <Contact />
     </Wrapper>
   )
 }
@@ -77,17 +79,17 @@ const Wrapper = styled.main`
     }
   }
   .container {
-    padding: 3rem;
+    padding: 5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 90%;
 
     .project-title {
       h2 {
-        font-weight: 400;
+        font-weight: 600;
+        font-size: 3rem;
         margin-bottom: 3rem;
       }
     }
@@ -137,24 +139,26 @@ const Wrapper = styled.main`
 
         .description {
           margin-bottom: 0.7rem;
+          color: black;
+          font-size: 1.6rem;
         }
 
         a {
           margin-right: 0.5rem;
+          color: black;
           font-size: 1.3rem;
         }
 
         .stack span {
           display: inline-block;
-          font-size: 0.8rem;
-          margin: 0 0 0.5rem;
-          margin-right: 1rem;
-          padding: 0rem 0.5rem;
+          font-size: 1rem;
+          margin: 0 0.5rem 0.5rem 0;
+          padding: 0.5rem 1rem;
           letter-spacing: 0.1rem;
           text-transform: uppercase;
-          border-radius: 2px;
-
-          background-color: var(--clr-grey-8);
+          border-radius: 50rem;
+          color: black;
+          background-color: var(--clr-grey-10);
         }
       }
     }

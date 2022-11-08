@@ -1,5 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&family=Roboto:wght@100;300;400;700&display=swap");
 
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../css/fonts/Satoshi-Variable.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../css/fonts/Satoshi-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../css/fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../css/fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../css/fonts/Satoshi-Black.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../css/fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
 :root {
   --clr-primary-1: hsl(184, 91%, 17%);
   --clr-primary-2: hsl(185, 84%, 25%);
@@ -26,6 +69,7 @@
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-white: #fff;
   --clr-black: rgb(36, 33, 33);
+  --ff-satoshi: "Satoshi-Variable", sans-serif;
   --ff-primary: "Oswald", sans-serif;
   --ff-secondary: "Roboto", sans-serif;
   --transition: all 0.3s linear;
@@ -47,6 +91,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 /* @media only screen and (max-width: 75em) {
   html {
@@ -54,7 +99,8 @@ html {
   }
 } */
 body {
-  font-family: var(--ff-primary);
+  /* background-color: black; */
+  font-family: var(--ff-satoshi);
   color: var(--color-black);
   font-weight: 300;
   line-height: 1.6;
@@ -70,6 +116,7 @@ ul {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 h1,
@@ -80,7 +127,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-satoshi);
   text-transform: none;
 }
 
@@ -89,8 +136,8 @@ h2,
 h3,
 h4,
 p {
-  font-family: var(--ff-secondary);
-  font-weight: 300;
+  font-family: var(--ff-satoshi);
+  font-weight: 400;
 }
 
 h1 {
@@ -183,4 +230,20 @@ p {
   to {
     transform: translateY(0);
   }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
 }

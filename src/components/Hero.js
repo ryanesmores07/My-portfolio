@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <main className="container">
-        <h2 className="name">👋 Hey, I'm Ryan Esmores</h2>
+        <h2 className="name">👋 Hey, I'm Ernie Ryan</h2>
         <h1 className="header">front-end</h1>
         <h1 className="web-dev">web developer</h1>
 
