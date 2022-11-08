@@ -172,7 +172,6 @@ const Wrapper = styled.section`
           outline: 0;
         }
         .btn-container {
-          cursor: pointer;
           display: flex;
           align-items: center;
           position: relative;
@@ -193,6 +192,7 @@ const Wrapper = styled.section`
             font-size: 1.8rem;
             font-weight: 400;
             border: none;
+            cursor: pointer;
           }
           .icon-bg {
             background-color: white;
