@@ -110,11 +110,7 @@ const Wrapper = styled.main`
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-          to bottom right,
-          var(--clr-primary-5),
-          #222
-        );
+        background: linear-gradient(3deg, #fff 10%, #cd1590 70%, #d2177e 40%);
         opacity: 0.85;
         transition: var(--transition);
       }
