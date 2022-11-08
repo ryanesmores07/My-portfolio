@@ -168,6 +168,7 @@ const Wrapper = styled.section`
           padding: 1rem;
           border: 2px solid;
           background-color: black;
+          color: white;
           outline: 0;
         }
         .btn-container {
