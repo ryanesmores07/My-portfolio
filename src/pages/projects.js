@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import { ProjectList, SelectedProjects } from "../components"
+import { Contact, ProjectList, SelectedProjects } from "../components"
 
 const Projects = ({
   data: {
@@ -19,6 +19,8 @@ const Projects = ({
           </h1>
         </div>
         <ProjectList projects={datas} />
+        <div className="spacing"></div>
+        <Contact />
       </Wrapper>
     </>
   )
@@ -48,7 +50,7 @@ export const query = graphql`
 
 const Wrapper = styled.section`
   background-color: black;
-  padding: 2rem;
+  padding: 2rem 2rem 0rem;
 
   .text-gradient {
     background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e, #eb9fed);
@@ -82,6 +84,24 @@ const Wrapper = styled.section`
         max-width: 14ch;
       }
       margin-bottom: 13rem;
+    }
+
+    .spacing {
+      margin-bottom: 10rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    padding-inline: 10rem;
+    .container {
+      h1 {
+      }
+    }
+  }
+  @media (min-width: 1920px) {
+    padding-inline: 35rem;
+    .container {
+      h1 {
+      }
     }
   }
 `

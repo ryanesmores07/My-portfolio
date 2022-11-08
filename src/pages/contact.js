@@ -79,6 +79,7 @@ const ContactPage = () => {
 }
 
 const Wrapper = styled.section`
+  min-height: 60vh;
   background-color: black;
   color: white;
   padding: 4rem 2rem;
@@ -229,6 +230,44 @@ const Wrapper = styled.section`
       }
       .form-container {
         width: 40%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 4rem 9rem;
+
+    .container {
+      display: flex;
+      /* gap: 3rem; */
+      justify-content: space-evenly;
+      .text-container {
+        width: 45%;
+        h1 {
+          font-size: 6rem;
+        }
+        p {
+          max-width: 80%;
+        }
+      }
+      .form-container {
+        width: 35%;
+      }
+    }
+  }
+  @media (min-width: 1920px) {
+    padding-inline: 25rem;
+    .container {
+      .text-container {
+        h1 {
+          font-size: 6.5rem;
+        }
+        p {
+          max-width: 70%;
+        }
+      }
+      .form-container {
       }
     }
   }

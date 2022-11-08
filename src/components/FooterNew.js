@@ -31,16 +31,16 @@ const FooterNew = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="#services">Services</a>
+                <a href="/#Services">Services</a>
               </li>
               <li>
-                <a href="#projects">Projects</a>
+                <a href="/projects">Projects</a>
               </li>
               <li>
-                <a href="#about">About Me</a>
+                <a href="/#About">About Me</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>

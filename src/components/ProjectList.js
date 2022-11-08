@@ -12,7 +12,7 @@ const ProjectList = ({ projects }) => {
           const { title, slug, description, image, github, url, content } =
             project
           return (
-            <div className="projects-container" key={index}>
+            <div className="grid-item" key={index}>
               <Link to={`/projects/${slug}`}>
                 <GatsbyImage
                   image={getImage(image)}
@@ -46,10 +46,9 @@ const ProjectList = ({ projects }) => {
 
 const Wrapper = styled.article`
   .container {
-    .projects-container {
+    .grid-item {
       padding: 2rem;
       background-color: #1f1f1f;
-      margin-bottom: 4rem;
       .image {
         margin-bottom: 2rem;
       }
@@ -100,45 +99,57 @@ const Wrapper = styled.article`
 
   @media (min-width: 768px) {
     .container {
-      width: 80%;
+      max-width: 100%;
+      padding-right: 15rem;
+      .grid-item {
+        margin-bottom: 3rem;
+      }
     }
   }
 
   @media (min-width: 1164px) {
+    transform: translateY(-10rem);
+    margin-bottom: -15rem;
     .container {
-      width: 100%;
       display: grid;
-      gap: 4rem;
+      padding-right: 0;
+      gap: 5rem;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(10, 5rem);
-      align-items: center;
-      .projects-container {
-        padding: 3rem;
-        margin-bottom: 0;
-      }
 
-      .projects-container:nth-of-type(1) {
+      .grid-item {
+        margin-bottom: 0;
+
+        padding: 3rem;
+      }
+      .grid-item:nth-child(even) {
+        transform: translateY(10rem);
+      }
+      .grid-item:nth-of-type(1) {
         grid-column: 2 / 3;
-        grid-row: 2 / span 2;
+        grid-row: 1 / span 1;
+        /* background-color: red; */
       }
-      .projects-container:nth-of-type(2) {
+      .grid-item:nth-of-type(2) {
         grid-column: 1 / 2;
-        grid-row: 3 / span 2;
+        grid-row: 1 / span 1;
+        /* background-color: yellow; */
       }
-      .projects-container:nth-of-type(3) {
+      .grid-item:nth-of-type(3) {
         grid-column: 2 / 3;
-        grid-row: 8 / span 2;
+        grid-row: 2 / span 1;
+        /* background-color: green; */
       }
-      .projects-container:nth-of-type(4) {
+      .grid-item:nth-of-type(4) {
         grid-column: 1 / 2;
-        grid-row: 9 / span 2;
+        grid-row: 2 / span 1;
+        /* background-color: pink; */
       }
     }
   }
 
   @media (min-width: 1440px) {
     .container {
-      gap: 5rem;
+      /* gap: 5rem; */
     }
   }
 `

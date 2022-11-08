@@ -76,7 +76,7 @@ const Wrapper = styled.article`
       margin-bottom: 0;
     }
     p {
-      color: var(--clr-grey-10);
+      color: var(--clr-grey-9);
       font-size: 1.4rem;
     }
   }
@@ -95,6 +95,13 @@ const Wrapper = styled.article`
   @media (min-width: 1440px) {
     .container {
       width: 25%;
+    }
+  }
+  @media (min-width: 1920px) {
+    gap: 5rem;
+
+    .container {
+      width: 20%;
     }
   }
 `

@@ -201,14 +201,14 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 1440px) {
-    padding: 8rem 10rem 20rem;
+    padding: 8rem 35rem 20rem;
 
     .container {
-      flex-direction: row;
       .text-container {
         width: 60%;
         h1 {
-          font-size: 6rem;
+          font-size: 7rem;
+          width: 100%;
           font-weight: 900;
         }
         p {
@@ -218,25 +218,16 @@ const Wrapper = styled.header`
           a {
           }
           .icon-bg {
-            left: 20rem;
             .arrow {
             }
           }
         }
       }
       .image-container {
-        max-width: 40%;
         &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
         }
 
         .photo {
-          height: 100%;
         }
       }
     }

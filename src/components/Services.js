@@ -95,6 +95,17 @@ const Wrapper = styled.section`
       }
     }
   }
+  @media (min-width: 1920px) {
+    padding-bottom: 12rem;
+    .text-container {
+      h2 {
+      }
+
+      p {
+        max-width: 30%;
+      }
+    }
+  }
 `
 
 export default Services

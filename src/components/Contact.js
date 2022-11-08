@@ -16,7 +16,7 @@ const Contact = () => {
           creative boundaries Working with startups
         </p>
         <div className="button-container">
-          <Link to="/">Book FREE Call</Link>
+          <Link to="/contact">Book FREE Call</Link>
           <div className="icon-bg">
             <HiOutlineArrowRight className="arrow" />
           </div>

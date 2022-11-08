@@ -47,8 +47,6 @@ const Wrapper = styled.nav`
   width: 100%;
   z-index: 10;
   top: 0;
-  transition: top 0.6s ease 0s;
-  /* position: sticky; */
 
   .container {
     margin: 0 auto;
@@ -58,7 +56,7 @@ const Wrapper = styled.nav`
     /* width: 90%; */
     padding: 3rem 4rem;
     .logo {
-      max-width: 10rem;
+      width: 10rem;
     }
     .links {
       display: none;
@@ -84,6 +82,28 @@ const Wrapper = styled.nav`
             }
             a {
               color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1920px) {
+    padding: 0 20rem;
+    .container {
+      .logo {
+        /* max-width: 13rem; */
+        width: 20rem;
+      }
+      .links {
+        ul {
+          gap: 4rem;
+
+          li {
+            &:last-child {
+              right: 24rem;
+            }
+            a {
             }
           }
         }

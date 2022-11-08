@@ -257,6 +257,56 @@ const Wrapper = styled.section`
       }
     }
   }
+  @media (min-width: 1920px) {
+    padding-inline: 35rem;
+    .text-container {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: min-content 1fr;
+      .name {
+        margin-right: 0;
+        font-size: 7rem;
+      }
+      .paragraph-container {
+        justify-content: center;
+        max-width: 80%;
+        p {
+          font-size: 2.4rem;
+        }
+      }
+      .blockquote-container {
+        grid-column: 2 / 3;
+        q {
+          font-size: 3rem;
+          line-height: 0.8;
+        }
+
+        span {
+          font-size: 3rem;
+        }
+      }
+    }
+    .image-section {
+      .photo {
+        height: 35rem;
+      }
+      .section-1,
+      .section-2 {
+      }
+      .section-1 {
+        .photo-1 {
+        }
+        .photo-2 {
+        }
+      }
+      .section-2 {
+        .photo-3 {
+        }
+        .photo-4 {
+        }
+      }
+    }
+  }
 `
 
 export default About

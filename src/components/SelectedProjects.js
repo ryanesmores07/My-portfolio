@@ -142,7 +142,7 @@ const Wrapper = styled.article`
     .viewall-container {
       position: absolute;
       right: 19rem;
-      bottom: 12rem;
+      bottom: 17rem;
       a {
       }
       .icon-bg {
@@ -163,6 +163,27 @@ const Wrapper = styled.article`
       }
     }
     .viewall-container {
+      right: 27rem;
+
+      a {
+      }
+      .icon-bg {
+        .second-arrow {
+        }
+      }
+    }
+  }
+  @media (min-width: 1920px) {
+    padding-inline: 38rem;
+    .text-container {
+      h2 {
+      }
+      p {
+      }
+    }
+    .viewall-container {
+      right: 53.5rem;
+
       a {
       }
       .icon-bg {
