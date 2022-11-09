@@ -3,6 +3,7 @@ import { HiOutlineArrowRight } from "react-icons/hi"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import yawa from "../assets/images/ryan2.jpg"
 
 const HeroNew = () => {
   return (
@@ -26,12 +27,18 @@ const HeroNew = () => {
             </div>
           </div>
         </div>
+
         <div className="image-container">
           <StaticImage
             className="photo"
-            src="../assets/images/ryan.jpg"
+            src="../assets/images/ryan2.jpg"
             alt="my-photo"
+            layout="fullWidth"
+            loading="eager"
+            width={800}
+            aspectRatio={4 / 5.5}
           />
+          {/* <img src={yawa} alt="" /> */}
         </div>
       </div>
     </Wrapper>
@@ -112,21 +119,18 @@ const Wrapper = styled.header`
     .image-container {
       text-align: center;
       position: relative;
+      padding: 1rem;
+      /* max-width: 70%; */
 
       &::before {
         content: "";
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        inset: 0;
         background: linear-gradient(3deg, #fff 10%, #cd1590 70%, #d2177e 40%);
         filter: blur(25px);
         opacity: 0.8;
       }
-
       .photo {
-        width: 90%;
       }
     }
   }
@@ -137,9 +141,9 @@ const Wrapper = styled.header`
     .container {
       .text-container {
         margin-bottom: 7rem;
+        width: 70%;
         h1 {
           font-size: 6rem;
-          width: 70%;
           font-weight: 500;
           line-height: 1.1;
         }
@@ -149,10 +153,9 @@ const Wrapper = styled.header`
       }
       .image-container {
         text-align: center;
-        width: 60%;
+        max-width: 70%;
 
         .photo {
-          /* width: 70%; */
         }
       }
     }
@@ -163,8 +166,11 @@ const Wrapper = styled.header`
 
     .container {
       flex-direction: row;
+      gap: 0;
       .text-container {
-        width: 60%;
+        flex: 1 1 60%;
+
+        /* width: 70%; */
         h1 {
           font-size: 7rem;
           font-weight: 900;
@@ -176,25 +182,20 @@ const Wrapper = styled.header`
           a {
           }
           .icon-bg {
-            left: 20rem;
             .arrow {
             }
           }
         }
       }
       .image-container {
-        max-width: 40%;
+        /* width: 40%; */
+        flex: 1 1 40%;
+
         &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
         }
 
         .photo {
-          height: 100%;
+          /* height: 100%; */
         }
       }
     }
@@ -202,14 +203,12 @@ const Wrapper = styled.header`
 
   @media (min-width: 1440px) {
     padding: 8rem 10rem 20rem;
-
     .container {
+      max-width: 120rem;
+      margin: 0 auto;
+
       .text-container {
-        width: 60%;
         h1 {
-          font-size: 7rem;
-          width: 100%;
-          font-weight: 900;
         }
         p {
           max-width: 70%;

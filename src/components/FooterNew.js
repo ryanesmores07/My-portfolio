@@ -72,6 +72,18 @@ const Wrapper = styled.footer`
   color: white;
   padding: 8rem 2rem;
   .container {
+    position: relative;
+    &::before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e, #eb9fed);
+      opacity: 0.5;
+      transform: scaleX(2);
+      top: -12rem;
+      left: 0;
+      position: absolute;
+    }
     .contact-container {
       margin-bottom: 7rem;
       position: relative;
@@ -163,6 +175,8 @@ const Wrapper = styled.footer`
   @media (min-width: 1164px) {
     padding: 12rem 5rem;
     .container {
+      max-width: 120rem;
+      margin: 0 auto;
       display: flex;
       justify-content: space-evenly;
       gap: 10rem;

@@ -111,6 +111,7 @@ const Wrapper = styled.article`
     transform: translateY(-10rem);
     margin-bottom: -15rem;
     .container {
+      margin: 0 auto;
       display: grid;
       padding-right: 0;
       gap: 5rem;
@@ -150,6 +151,7 @@ const Wrapper = styled.article`
   @media (min-width: 1440px) {
     .container {
       /* gap: 5rem; */
+      max-width: 125rem;
     }
   }
 `

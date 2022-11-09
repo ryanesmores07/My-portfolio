@@ -243,6 +243,8 @@ const Wrapper = styled.section`
     .container {
       display: flex;
       /* gap: 3rem; */
+      max-width: 120rem;
+      margin: 0 auto;
       justify-content: space-evenly;
       .text-container {
         width: 45%;

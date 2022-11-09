@@ -94,14 +94,13 @@ const Wrapper = styled.article`
   }
   @media (min-width: 1440px) {
     .container {
-      width: 25%;
+      max-width: 35rem;
     }
   }
   @media (min-width: 1920px) {
     gap: 5rem;
 
     .container {
-      width: 20%;
     }
   }
 `
