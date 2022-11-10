@@ -1,28 +1,53 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import { Contact, ProjectList, SelectedProjects } from "../components"
+import { Contact, ProjectList, ShopifyProjects } from "../components"
 
 const Projects = ({
   data: {
     info: { nodes: datas },
   },
 }) => {
-  console.log(datas)
+  const [shopify, setShopify] = useState(false)
+
+  const showShopify = () => {
+    setShopify(true)
+  }
+  const showFrontend = () => {
+    setShopify(false)
+  }
+
   return (
-    <>
-      <Wrapper>
-        <div className="container">
-          <h1 className="title">
-            Frontend designs and
-            <span className="text-gradient"> Projects</span>
-          </h1>
-        </div>
-        <ProjectList projects={datas} />
-        <div className="spacing"></div>
-        <Contact />
-      </Wrapper>
-    </>
+    <Wrapper>
+      <div className="container">
+        <h1 className="title">
+          Frontend designs and
+          <span className="text-gradient"> Projects</span>
+        </h1>
+      </div>
+
+      <div className="toggle-button-container">
+        <button
+          // className={`${shopify} ? "Shopify-btn active" : ""`}
+          className={` ${shopify ? "shopify-btn active" : "shopify-btn"} `}
+          onClick={showShopify}
+        >
+          Shopify Development
+        </button>
+        <button
+          // className={`${!shopify} ? "frontend-btn active" : "frontend-btn"`}
+          className={` ${shopify ? "frontend-btn" : "frontend-btn active"} `}
+          onClick={showFrontend}
+        >
+          Web Development
+        </button>
+      </div>
+      {shopify && <ShopifyProjects />}
+      {!shopify && <ProjectList projects={datas} />}
+
+      <div className="spacing"></div>
+      <Contact />
+    </Wrapper>
   )
 }
 
@@ -52,6 +77,32 @@ const Wrapper = styled.section`
   background-color: black;
   padding: 2rem 2rem 0rem;
   overflow: hidden;
+
+  .toggle-button-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 5rem;
+
+    .active {
+      background-color: var(--clr-grey-9);
+      color: black;
+    }
+
+    & > * {
+      flex: 1;
+      background-color: #1f1f1f;
+      width: 100%;
+      font-weight: 500;
+      padding: 1.5rem 1rem;
+      border-radius: 50rem;
+      border-style: none;
+      color: white;
+    }
+  }
 
   .text-gradient {
     background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e, #eb9fed);

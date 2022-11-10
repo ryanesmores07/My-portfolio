@@ -49,6 +49,8 @@ const Wrapper = styled.article`
     .grid-item {
       padding: 2rem;
       background-color: #1f1f1f;
+      margin-bottom: 5rem;
+
       .image {
         margin-bottom: 2rem;
       }

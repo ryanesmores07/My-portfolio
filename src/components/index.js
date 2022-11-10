@@ -11,6 +11,7 @@ import About from "./About"
 import Contact from "./Contact"
 import FooterNew from "./FooterNew"
 import ProjectList from "./ProjectList"
+import ShopifyProjects from "./ShopifyProjects"
 
 export {
   Footer,
@@ -26,4 +27,5 @@ export {
   Contact,
   FooterNew,
   ProjectList,
+  ShopifyProjects,
 }
