@@ -68,6 +68,8 @@ const FooterNew = () => {
 }
 
 const Wrapper = styled.footer`
+  overflow: hidden;
+
   background-color: black;
   color: white;
   padding: 8rem 2rem;

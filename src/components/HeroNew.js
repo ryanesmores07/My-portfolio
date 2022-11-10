@@ -3,7 +3,6 @@ import { HiOutlineArrowRight } from "react-icons/hi"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-import yawa from "../assets/images/ryan2.jpg"
 
 const HeroNew = () => {
   return (
@@ -38,7 +37,6 @@ const HeroNew = () => {
             width={800}
             aspectRatio={4 / 5.5}
           />
-          {/* <img src={yawa} alt="" /> */}
         </div>
       </div>
     </Wrapper>
@@ -49,6 +47,10 @@ const Wrapper = styled.header`
   background-color: black;
   color: white;
   padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
   .text-gradient {
     background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e);
     background-clip: text;
@@ -162,10 +164,11 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 1164px) {
-    padding: 8rem 5rem 20rem;
-
+    padding-bottom: 20rem;
     .container {
+      width: 100%;
       flex-direction: row;
+      /* justify-content: center; */
       gap: 0;
       .text-container {
         flex: 1 1 60%;
@@ -202,11 +205,10 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 1440px) {
-    padding: 8rem 10rem 20rem;
+    padding-inline: 10rem;
     .container {
       max-width: 120rem;
-      margin: 0 auto;
-
+      gap: 5rem;
       .text-container {
         h1 {
         }

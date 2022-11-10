@@ -80,6 +80,8 @@ const ContactPage = () => {
 
 const Wrapper = styled.section`
   min-height: 60vh;
+  overflow: hidden;
+
   background-color: black;
   color: white;
   padding: 4rem 2rem;
@@ -169,6 +171,7 @@ const Wrapper = styled.section`
           border: 2px solid;
           background-color: black;
           color: white;
+          border-style: hidden;
           outline: 0;
         }
         .btn-container {
@@ -217,9 +220,31 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (min-width: 1164px) {
+  @media (min-width: 768px) {
     padding: 4rem 5rem;
 
+    .container {
+      .text-container {
+        width: 80%;
+        h1 {
+          font-size: 6rem;
+        }
+        p {
+          max-width: 80%;
+        }
+      }
+      .form-container {
+        .form {
+          padding-bottom: 0;
+          .btn-container {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1164px) {
     .container {
       display: flex;
       /* gap: 3rem; */
@@ -227,7 +252,6 @@ const Wrapper = styled.section`
       .text-container {
         width: 50%;
         h1 {
-          font-size: 6rem;
         }
       }
       .form-container {

@@ -51,6 +51,7 @@ export const query = graphql`
 const Wrapper = styled.section`
   background-color: black;
   padding: 2rem 2rem 0rem;
+  overflow: hidden;
 
   .text-gradient {
     background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e, #eb9fed);

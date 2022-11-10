@@ -57,6 +57,7 @@ const SelectedProjects = () => {
 }
 
 const Wrapper = styled.article`
+  overflow: hidden;
   background-color: black;
   color: white;
   padding: 8rem 2rem;

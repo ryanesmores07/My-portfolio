@@ -29,6 +29,8 @@ const Contact = () => {
 }
 
 const Wrapper = styled.section`
+  overflow: hidden;
+
   background-color: black;
   color: white;
   padding: 8rem 2rem;

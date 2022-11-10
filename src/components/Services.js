@@ -21,7 +21,8 @@ const Services = () => {
 
 const Wrapper = styled.section`
   background-color: black;
-  /* height: 100vh; */
+  overflow: hidden;
+
   padding: 5rem 2rem;
 
   color: white;

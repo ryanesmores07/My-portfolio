@@ -58,19 +58,25 @@ const ProjectTemplate = ({
 
 const Wrapper = styled.main`
   background-color: var(--clr-grey-10);
-
+  .text-gradient {
+    background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .return-container {
+    padding: 3rem 5rem 0;
+    display: flex;
+    align-items: center;
     .icon {
       font-size: 2rem;
       margin-right: 1rem;
     }
-    padding: 3rem 5rem 0;
-    display: flex;
-    align-items: center;
+
     .return {
       font-size: 2rem;
       letter-spacing: 0.1rem;
-      font-weight: 200;
+      font-weight: 500;
       color: var(--clr-black);
     }
     &:hover {
@@ -79,7 +85,7 @@ const Wrapper = styled.main`
     }
   }
   .container {
-    padding: 5rem 0;
+    padding: 5rem 0 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,9 +101,7 @@ const Wrapper = styled.main`
     }
 
     .project-container {
-      /* background-color: var(--clr-white); */
       width: 80%;
-      /* border: 1px solid black; */
 
       .image {
         box-shadow: var(--dark-shadow);
@@ -129,8 +133,7 @@ const Wrapper = styled.main`
           text-transform: uppercase;
           letter-spacing: 0.1rem;
           margin-bottom: 1rem;
-          font-size: 2rem;
-          font-weight: 700;
+          font-weight: 900;
         }
 
         .description {
@@ -140,7 +143,7 @@ const Wrapper = styled.main`
         }
 
         a {
-          margin-right: 0.5rem;
+          margin-right: 1rem;
           color: black;
           font-size: 1.3rem;
         }
@@ -148,7 +151,7 @@ const Wrapper = styled.main`
         .stack span {
           display: inline-block;
           font-size: 1rem;
-          margin: 0 0.5rem 0.5rem 0;
+          margin: 0 1rem 0 0;
           padding: 0.5rem 1rem;
           letter-spacing: 0.1rem;
           text-transform: uppercase;
@@ -183,7 +186,6 @@ const Wrapper = styled.main`
           justify-content: center;
 
           .title {
-            font-size: 2.2rem;
           }
           .description {
             font-size: 1.5rem;
@@ -201,7 +203,6 @@ const Wrapper = styled.main`
             font-size: 2rem;
           }
           .title {
-            font-size: 3rem;
           }
           .description {
             font-size: 2rem;

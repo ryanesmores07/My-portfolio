@@ -43,6 +43,7 @@ const Navbar = () => {
 }
 
 const Wrapper = styled.nav`
+  overflow: hidden;
   background-color: black;
   width: 100%;
   z-index: 10;

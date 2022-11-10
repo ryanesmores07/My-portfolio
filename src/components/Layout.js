@@ -1,16 +1,19 @@
 import React from "react"
 import "../assets/css/main.css"
+import styled from "styled-components"
 
 import { Navbar, FooterNew } from "../components/"
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <Wrapper>
       <Navbar />
       {children}
       <FooterNew />
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div``
 
 export default Layout
