@@ -32,7 +32,7 @@ const HeroNew = () => {
             className="photo"
             src="../assets/images/ryan2.jpg"
             alt="my-photo"
-            layout="fullWidth"
+            layout="constrained"
             loading="eager"
             width={800}
             aspectRatio={4 / 5.5}

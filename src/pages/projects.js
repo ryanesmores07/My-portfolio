@@ -85,7 +85,8 @@ const Wrapper = styled.section`
     border-radius: 20px;
     margin: 0 auto;
     width: 60%;
-    margin-bottom: 5rem;
+    margin-bottom: 15rem;
+    cursor: pointer;
 
     .active {
       background-color: var(--clr-grey-9);
@@ -131,16 +132,17 @@ const Wrapper = styled.section`
   @media (min-width: 1164px) {
     .container {
       margin: 0 auto;
+
       .title {
         font-size: 6rem;
         max-width: 70%;
         margin: 0 auto;
+        margin-bottom: 5rem;
       }
-      margin-bottom: 17rem;
     }
 
     .spacing {
-      margin-bottom: 10rem;
+      margin-bottom: 25rem;
     }
   }
   @media (min-width: 1440px) {

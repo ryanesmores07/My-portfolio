@@ -117,7 +117,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 1164px) {
-    padding-bottom: 0;
+    padding-bottom: 10rem;
     .container {
       .text-container {
         display: flex;
@@ -129,7 +129,7 @@ const Wrapper = styled.section`
           font-weight: 500;
         }
         p {
-          max-width: 45%;
+          max-width: 60%;
           text-align: center;
         }
         .button-container {

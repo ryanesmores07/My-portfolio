@@ -216,6 +216,26 @@ const Wrapper = styled.main`
       }
     }
   }
+
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 120rem;
+      margin: 0 auto;
+      .project-container {
+        .content {
+          a {
+          }
+          .title {
+          }
+          .description {
+          }
+
+          .stack span {
+          }
+        }
+      }
+    }
+  }
 `
 
 export const query = graphql`
