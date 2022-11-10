@@ -13,7 +13,7 @@ const Projects = ({
     <>
       <Wrapper>
         <div className="container">
-          <h1>
+          <h1 className="title">
             Frontend designs and
             <span className="text-gradient"> Projects</span>
           </h1>
@@ -73,18 +73,19 @@ const Wrapper = styled.section`
       color: white;
     }
   }
-  @media (min-width: 1164px) {
+  @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+  }
+  @media (min-width: 1164px) {
     .container {
       margin: 0 auto;
-      h1 {
+      .title {
         font-size: 6rem;
-        max-width: 14ch;
+        max-width: 70%;
+        margin: 0 auto;
       }
-      margin-bottom: 13rem;
+      margin-bottom: 17rem;
     }
 
     .spacing {
@@ -94,15 +95,11 @@ const Wrapper = styled.section`
   @media (min-width: 1440px) {
     padding-inline: 10rem;
     .container {
-      h1 {
-      }
     }
   }
   @media (min-width: 1920px) {
     padding-inline: 35rem;
     .container {
-      h1 {
-      }
     }
   }
 `

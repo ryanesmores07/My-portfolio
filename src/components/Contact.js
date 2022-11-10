@@ -30,7 +30,6 @@ const Contact = () => {
 
 const Wrapper = styled.section`
   overflow: hidden;
-
   background-color: black;
   color: white;
   padding: 8rem 2rem;
@@ -100,6 +99,7 @@ const Wrapper = styled.section`
     .container {
       .text-container {
         h1 {
+          text-align: left;
           font-size: 6rem;
           font-weight: 500;
           width: 80%;
@@ -117,13 +117,14 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 1164px) {
-    text-align: center;
+    padding-bottom: 0;
     .container {
       .text-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         h1 {
+          text-align: center;
           line-height: 1.1;
           font-weight: 500;
         }
