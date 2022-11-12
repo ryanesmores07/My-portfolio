@@ -19,7 +19,7 @@ const Projects = ({
 
   return (
     <Wrapper>
-      <div className="container">
+      <div className="title-container">
         <h1 className="title">
           Frontend designs and
           <span className="text-gradient"> Projects</span>
@@ -28,14 +28,12 @@ const Projects = ({
 
       <div className="toggle-button-container">
         <button
-          // className={`${shopify} ? "Shopify-btn active" : ""`}
           className={` ${shopify ? "shopify-btn active" : "shopify-btn"} `}
           onClick={showShopify}
         >
           Shopify Development
         </button>
         <button
-          // className={`${!shopify} ? "frontend-btn active" : "frontend-btn"`}
           className={` ${shopify ? "frontend-btn" : "frontend-btn active"} `}
           onClick={showFrontend}
         >
@@ -75,7 +73,7 @@ export const query = graphql`
 
 const Wrapper = styled.section`
   background-color: black;
-  padding: 2rem 2rem 0rem;
+  padding: 8rem 2rem 0rem;
   overflow: hidden;
 
   .toggle-button-container {
@@ -84,9 +82,8 @@ const Wrapper = styled.section`
     background-color: #1f1f1f;
     border-radius: 20px;
     margin: 0 auto;
-    width: 60%;
+    max-width: 20rem;
     margin-bottom: 15rem;
-    cursor: pointer;
 
     .active {
       background-color: var(--clr-grey-9);
@@ -102,6 +99,7 @@ const Wrapper = styled.section`
       border-radius: 50rem;
       border-style: none;
       color: white;
+      cursor: pointer;
     }
   }
 
@@ -112,7 +110,7 @@ const Wrapper = styled.section`
     -webkit-text-fill-color: transparent;
   }
 
-  .container {
+  .title-container {
     color: white;
     h1 {
       text-align: center;
@@ -126,11 +124,15 @@ const Wrapper = styled.section`
     }
   }
   @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
+    .title-container {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+    .toggle-button-container {
+    }
   }
   @media (min-width: 1164px) {
-    .container {
+    .title-container {
       margin: 0 auto;
 
       .title {
@@ -139,6 +141,8 @@ const Wrapper = styled.section`
         margin: 0 auto;
         margin-bottom: 5rem;
       }
+    }
+    .toggle-button-container {
     }
 
     .spacing {
@@ -149,10 +153,13 @@ const Wrapper = styled.section`
     padding-inline: 10rem;
     .container {
     }
+    .toggle-button-container {
+      max-width: 30rem;
+    }
   }
   @media (min-width: 1920px) {
     padding-inline: 35rem;
-    .container {
+    .title-container {
     }
   }
 `

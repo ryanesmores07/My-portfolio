@@ -9,15 +9,15 @@ const HeroNew = () => {
     <Wrapper>
       <div className="container">
         <div className="text-container">
-          <h1 className="text-gradient">eCommerce Developer</h1>
-          <h1>crafting products</h1>
-          <h1>that people love</h1>
-          <p>
+          <h1 className="text-gradient appear">eCommerce Developer</h1>
+          <h1 className="appear-delay-1">crafting products</h1>
+          <h1 className="appear-delay-2">that people love</h1>
+          <p className="appear-delay-3">
             I'm Ernie Ryan— a web developer who works with startups looking to
             push creative boundaries and create unique user experiences.
           </p>
 
-          <div className="btn-container">
+          <div className="btn-container appear-delay-4">
             <Link className="btn" href="#">
               Book a FREE Call
             </Link>
@@ -27,7 +27,7 @@ const HeroNew = () => {
           </div>
         </div>
 
-        <div className="image-container">
+        <div className="image-container appear">
           <StaticImage
             className="photo"
             src="../assets/images/ryan2.jpg"
@@ -57,6 +57,25 @@ const Wrapper = styled.header`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .appear {
+    animation: appear 800ms forwards ease-in-out;
+  }
+  .appear-delay-1 {
+    animation: appear 800ms forwards ease-in-out;
+    animation-delay: 200ms, 1000ms;
+  }
+  .appear-delay-2 {
+    animation: appear 800ms forwards ease-in-out;
+    animation-delay: 400ms, 1000ms;
+  }
+  .appear-delay-3 {
+    animation: appear 800ms forwards ease-in-out;
+    animation-delay: 600ms, 1000ms;
+  }
+  .appear-delay-4 {
+    animation: appear 800ms forwards ease-in-out;
+    animation-delay: 800ms, 1000ms;
+  }
 
   .container {
     display: flex;
@@ -68,6 +87,7 @@ const Wrapper = styled.header`
         font-size: 5rem;
         font-weight: 700;
         line-height: 1.2;
+        transform: scaleY(0);
       }
 
       p {
@@ -77,12 +97,14 @@ const Wrapper = styled.header`
         font-family: var(--ff-satoshi);
         font-weight: 400;
         max-width: 95%;
+        transform: scaleY(0);
       }
 
       .btn-container {
         display: flex;
         align-items: center;
         position: absolute;
+        transform: scaleY(0);
 
         a {
           background: linear-gradient(
@@ -122,7 +144,7 @@ const Wrapper = styled.header`
       text-align: center;
       position: relative;
       padding: 1rem;
-      /* max-width: 70%; */
+      transform: scaleY(0);
 
       &::before {
         content: "";
@@ -130,9 +152,19 @@ const Wrapper = styled.header`
         inset: 0;
         background: linear-gradient(3deg, #fff 10%, #cd1590 70%, #d2177e 40%);
         filter: blur(25px);
-        opacity: 0.8;
+        opacity: 0.5;
+        animation: pulse 2000ms linear alternate-reverse infinite;
       }
       .photo {
+      }
+
+      @keyframes pulse {
+        from {
+          opacity: 0.5;
+        }
+        to {
+          opacity: 1;
+        }
       }
     }
   }

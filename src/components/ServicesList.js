@@ -46,6 +46,11 @@ const Wrapper = styled.article`
     gap: 2rem;
     padding: 3rem 2rem;
     position: relative;
+    transition: transform 200ms ease-out;
+
+    &:hover {
+      transform: translateY(-1.5rem);
+    }
     &:nth-child(2) {
       margin-bottom: 4rem;
     }

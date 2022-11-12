@@ -25,9 +25,9 @@ const Navbar = () => {
         </div>
         <div className="links">
           <ul>
-            {links.map(link => {
+            {links.map((link, index) => {
               return (
-                <li>
+                <li key={index}>
                   <Link to={link.url}>{link.text}</Link>
                 </li>
               )
@@ -77,9 +77,10 @@ const Wrapper = styled.nav`
               background-color: #191919;
               border-radius: 50rem;
               padding: 0.5rem 3rem;
-              position: absolute;
-              right: 10rem;
               font-weight: 500;
+              /* position: absolute;
+              right: 10rem;
+              justify-self: flex-end; */
             }
             a {
               color: white;
@@ -87,6 +88,11 @@ const Wrapper = styled.nav`
           }
         }
       }
+    }
+  }
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 140rem;
     }
   }
   @media (min-width: 1920px) {

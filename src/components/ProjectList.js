@@ -69,6 +69,7 @@ const Wrapper = styled.article`
         font-size: 2.4rem;
         font-weight: 600;
         color: white;
+        text-align: left;
         margin-bottom: 2rem;
       }
       .button-container {
@@ -103,6 +104,7 @@ const Wrapper = styled.article`
     .container {
       max-width: 100%;
       padding-right: 15rem;
+      /* padding-left: 2rem; */
       .grid-item {
         margin-bottom: 3rem;
       }
@@ -115,17 +117,29 @@ const Wrapper = styled.article`
     .container {
       margin: 0 auto;
       display: grid;
-      padding-right: 0;
+      padding-inline: 3rem;
       gap: 5rem;
       grid-template-columns: 1fr 1fr;
 
       .grid-item {
         margin-bottom: 0;
+        transition: transform 200ms ease-out;
+
+        &:hover {
+          transform: translateY(-1.5rem);
+        }
 
         padding: 3rem;
+        .title {
+          max-width: 100%;
+        }
       }
       .grid-item:nth-child(even) {
         transform: translateY(10rem);
+        transition: transform 200ms ease-out;
+        &:hover {
+          transform: translateY(8.5rem);
+        }
       }
       .grid-item:nth-of-type(1) {
         grid-column: 2 / 3;

@@ -232,6 +232,36 @@ p {
   }
 }
 
+@keyframes appear {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.appear {
+  animation: appear 800ms forwards ease-in-out;
+}
+.appear-delay-1 {
+  animation: appear 800ms forwards ease-in-out;
+  animation-delay: 200ms, 1000ms;
+}
+.appear-delay-2 {
+  animation: appear 800ms forwards ease-in-out;
+  animation-delay: 400ms, 1000ms;
+}
+.appear-delay-3 {
+  animation: appear 800ms forwards ease-in-out;
+  animation-delay: 600ms, 1000ms;
+}
+.appear-delay-4 {
+  animation: appear 800ms forwards ease-in-out;
+  animation-delay: 800ms, 1000ms;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;

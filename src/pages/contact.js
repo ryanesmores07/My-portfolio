@@ -9,16 +9,16 @@ const ContactPage = () => {
     <Wrapper>
       <div className="container">
         <div className="text-container" id="contact">
-          <h1>
+          <h1 className="appear">
             Have projects in mind? Let's work
             <span className="text-gradient"> together</span>
           </h1>
-          <p>
+          <p className="appear-delay-1">
             Have a project in mind? Looking to partner or work together? Reach
             out through the form and I'll get back to you in the next 48 hours.
           </p>
           <div className="contact-container">
-            <div className="emailphone">
+            <div className="emailphone appear-delay-2">
               <div className="icon-bg">
                 <FiMail className="icon" />
               </div>
@@ -26,7 +26,7 @@ const ContactPage = () => {
                 mytokyowebdev@ernieryan.dev
               </a>
             </div>
-            <div className="emailphone">
+            <div className="emailphone appear-delay-3">
               <div className="icon-bg">
                 <BsTelephone className="icon" />
               </div>
@@ -35,7 +35,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className="form-container">
+        <div className="form-container appear">
           <form action="https://submit-form.com/slwDqCJ6" className="form">
             <h3>FILL THE FORM BELOW*</h3>
             <input
@@ -99,11 +99,13 @@ const Wrapper = styled.section`
         font-weight: 500;
         line-height: 1.1;
         margin-bottom: 3rem;
+        transform: scaleY(0);
       }
       p {
         color: var(--clr-grey-9);
         font-size: 1.8rem;
         margin-bottom: 3rem;
+        transform: scaleY(0);
       }
       .contact-container {
         margin-bottom: 7rem;
@@ -122,6 +124,7 @@ const Wrapper = styled.section`
           align-items: center;
           position: relative;
           margin-bottom: 3rem;
+          transform: scaleY(0);
 
           a {
             font-size: 1.6rem;
@@ -137,6 +140,7 @@ const Wrapper = styled.section`
             height: 3.5rem;
             border-radius: 50%;
             position: absolute;
+
             left: 0;
             .icon {
               color: white;
@@ -155,6 +159,7 @@ const Wrapper = styled.section`
     .form-container {
       background-color: #1f1f1f;
       border-radius: 2px;
+      transform: scaleY(0);
 
       h3 {
         font-weight: 500;

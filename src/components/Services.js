@@ -1,15 +1,18 @@
-import React from "react"
+import React, { useRef, useEffect, useState } from "react"
 import styled from "styled-components"
 import ServicesList from "./ServicesList"
+import { useInView } from "react-intersection-observer"
 
 const Services = () => {
+  const { ref, inView } = useInView()
+
   return (
     <Wrapper>
       <div className="text-container" id="Services">
-        <h2>
+        <h2 className={inView ? "appear" : ""} ref={ref}>
           Look at my <span className="text-gradient">services</span>
         </h2>
-        <p>
+        <p className={inView ? "appear-delay-1" : ""}>
           If you are looking for someone who will help you to build your digital
           web presence than congratulations!
         </p>
@@ -40,6 +43,7 @@ const Wrapper = styled.section`
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 2rem;
+      transform: scaleY(0);
     }
 
     p {
@@ -47,6 +51,7 @@ const Wrapper = styled.section`
       color: var(--clr-grey-9);
       width: 95%;
       margin-bottom: 7rem;
+      transform: scaleY(0);
     }
   }
   @media (min-width: 768px) {

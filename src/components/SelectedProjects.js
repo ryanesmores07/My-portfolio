@@ -147,6 +147,7 @@ const Wrapper = styled.article`
     position: relative;
     .container {
       .text-container {
+        padding-inline: 3rem;
         h2 {
         }
         p {
@@ -155,7 +156,7 @@ const Wrapper = styled.article`
       }
       .viewall-container {
         position: absolute;
-        right: 13rem;
+        right: 14rem;
         bottom: 0;
         a {
         }
@@ -181,7 +182,7 @@ const Wrapper = styled.article`
         }
       }
       .viewall-container {
-        right: 16rem;
+        right: 18rem;
 
         a {
         }

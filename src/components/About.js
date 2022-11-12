@@ -48,7 +48,7 @@ const About = () => {
             />
             <StaticImage
               className="photo photo-4"
-              src="../assets/images/About-images/img1.JPG"
+              src="../assets/images/About-images/img5.jpg"
               alt="my-photo"
             />
           </div>
