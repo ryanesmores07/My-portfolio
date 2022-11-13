@@ -2,12 +2,18 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { Contact, ProjectList, ShopifyProjects } from "../components"
+import { useInView } from "react-intersection-observer"
 
 const Projects = ({
   data: {
     info: { nodes: datas },
   },
 }) => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
+
   const [shopify, setShopify] = useState(false)
 
   const showShopify = () => {
@@ -20,13 +26,20 @@ const Projects = ({
   return (
     <Wrapper>
       <div className="title-container">
-        <h1 className="title">
+        <h1 className={inView ? "title appear" : "title"} ref={ref}>
           Frontend designs and
           <span className="text-gradient"> Projects</span>
         </h1>
       </div>
 
-      <div className="toggle-button-container">
+      <div
+        className={
+          inView
+            ? "toggle-button-container appear-delay-1"
+            : "toggle-button-container"
+        }
+        ref={ref}
+      >
         <button
           className={` ${shopify ? "shopify-btn active" : "shopify-btn"} `}
           onClick={showShopify}
@@ -84,6 +97,7 @@ const Wrapper = styled.section`
     margin: 0 auto;
     max-width: 20rem;
     margin-bottom: 15rem;
+    transform: scaleY(0);
 
     .active {
       background-color: var(--clr-grey-9);
@@ -118,6 +132,7 @@ const Wrapper = styled.section`
       line-height: 1.2;
       font-weight: 500;
       margin-bottom: 7rem;
+      transform: scaleY(0);
     }
     p {
       color: white;

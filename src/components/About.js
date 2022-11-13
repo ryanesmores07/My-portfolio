@@ -1,26 +1,38 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-// import moduleName from '../assets/images/About-images/'
+import { useInView } from "react-intersection-observer"
 
 const About = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
+
   return (
     <Wrapper>
       <div className="container">
         <div className="text-container" id="About">
-          <h2 className="name">ERNIE RYAN</h2>
+          <h2 className={inView ? "name appear" : "name"} ref={ref}>
+            ERNIE RYAN
+          </h2>
           <div className="paragraph-container">
-            <p>
+            <p ref={ref} className={inView ? "appear" : ""}>
               Front-end / eCommerce developer based in Tokyo, Japan. I love
               building and designing responsive websites.
             </p>
-            <p>
+            <p ref={ref} className={inView ? "appear" : ""}>
               What is your challenge? I can help you with your eCommerce website
               and solve the problems that hinders the growth of your business!
             </p>
           </div>
 
-          <div className="blockquote-container">
+          <div
+            className={
+              inView ? "blockquote-container appear" : "blockquote-container"
+            }
+            ref={ref}
+          >
             <div className="blockquote">
               <q>You can do anything you set your mind to.</q>
               <span> - Eminem</span>
@@ -69,11 +81,13 @@ const Wrapper = styled.section`
         line-height: 1;
         font-weight: 500;
         margin-bottom: 3rem;
+        transform: scaleY(0);
       }
       p {
         font-size: 1.8rem;
         line-height: 1.5;
         color: black;
+        transform: scaleY(0);
       }
       .blockquote-container {
         display: flex;
@@ -85,6 +99,7 @@ const Wrapper = styled.section`
         width: 70%;
         border-left: 0.5rem solid steelblue;
         padding-left: 1rem;
+        transform: scaleY(0);
 
         q {
           font-size: 2rem;
@@ -111,6 +126,10 @@ const Wrapper = styled.section`
         opacity: 0.3;
         top: -10rem;
         background-color: black;
+      }
+
+      .section-1,
+      .section-2 {
       }
 
       .photo {

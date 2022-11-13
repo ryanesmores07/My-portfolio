@@ -1,10 +1,13 @@
-import React, { useRef, useEffect, useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import ServicesList from "./ServicesList"
 import { useInView } from "react-intersection-observer"
 
 const Services = () => {
-  const { ref, inView } = useInView()
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
 
   return (
     <Wrapper>
@@ -14,7 +17,7 @@ const Services = () => {
         </h2>
         <p className={inView ? "appear-delay-1" : ""}>
           If you are looking for someone who will help you to build your digital
-          web presence than congratulations!
+          web presence then congratulations!
         </p>
       </div>
       <ServicesList />

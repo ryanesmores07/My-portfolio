@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { HiOutlineArrowRight } from "react-icons/hi"
+import { useInView } from "react-intersection-observer"
 import ProjectList from "./ProjectList"
 
 const query = graphql`
@@ -28,6 +28,11 @@ const query = graphql`
 `
 
 const SelectedProjects = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
+
   const data = useStaticQuery(query)
   const projects = data.info.nodes
 
@@ -35,10 +40,10 @@ const SelectedProjects = () => {
     <Wrapper>
       <div className="container">
         <div className="text-container" id="projects">
-          <h2>
+          <h2 className={inView ? "appear" : ""} ref={ref}>
             Selected <span className="text-gradient">Projects</span>
           </h2>
-          <p>
+          <p className={inView ? "appear-delay-1" : ""} ref={ref}>
             Over the years, I've partnered with startups of all sizes and
             various stages to create some truly unique products. Here are a few
             that I feel were the most challenging yet rewarding.
@@ -46,7 +51,7 @@ const SelectedProjects = () => {
         </div>
         <ProjectList projects={projects} />
         <div className="viewall-container">
-          <Link to="/">View All Projects</Link>
+          <Link to="/projects">View All Projects</Link>
           <div className="icon-bg">
             <HiOutlineArrowRight className="second-arrow" />
           </div>
@@ -76,12 +81,14 @@ const Wrapper = styled.article`
         font-weight: 700;
         line-height: 1.2;
         margin-bottom: 2rem;
+        transform: scaleY(0);
       }
       p {
         font-size: 1.8rem;
         color: var(--clr-grey-9);
         width: 95%;
         margin-bottom: 7rem;
+        transform: scaleY(0);
       }
     }
 

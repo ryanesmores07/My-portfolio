@@ -2,21 +2,33 @@ import React from "react"
 import styled from "styled-components"
 import { HiOutlineArrowRight } from "react-icons/hi"
 import { Link } from "gatsby"
+import { useInView } from "react-intersection-observer"
 
 const Contact = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
   return (
     <Wrapper>
       <div className="container">
         <div className="text-container" id="contact">
-          <h1>Have projects in mind?</h1>
-          <h1>
+          <h1 className={inView ? "appear" : ""} ref={ref}>
+            Have projects in mind?
+          </h1>
+          <h1 className={inView ? "appear-delay-1" : ""} ref={ref}>
             Let's work <span className="text-gradient">together</span>
           </h1>
-          <p>
+          <p className={inView ? "appear-delay-2" : ""} ref={ref}>
             I'm Ernie Ryan— a developer who works with startups looking to push
             creative boundaries Working with startups
           </p>
-          <div className="button-container">
+          <div
+            className={
+              inView ? "button-container appear-delay-3" : "button-container"
+            }
+            ref={ref}
+          >
             <Link to="/contact">Book FREE Call</Link>
             <div className="icon-bg">
               <HiOutlineArrowRight className="arrow" />
@@ -46,16 +58,19 @@ const Wrapper = styled.section`
         font-weight: 500;
         line-height: 1.1;
         margin-bottom: 3rem;
+        transform: scaleY(0);
       }
       p {
         color: var(--clr-grey-9);
         font-size: 1.8rem;
         margin-bottom: 3rem;
+        transform: scaleY(0);
       }
       .button-container {
         display: flex;
         align-items: center;
         position: absolute;
+        transform: scaleY(0);
 
         a {
           background: linear-gradient(

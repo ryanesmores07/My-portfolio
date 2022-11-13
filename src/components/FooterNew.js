@@ -2,13 +2,21 @@ import React from "react"
 import styled from "styled-components"
 import { FiMail } from "react-icons/fi"
 import { BsTelephone } from "react-icons/bs"
+import { useInView } from "react-intersection-observer"
 
 const FooterNew = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
   return (
     <Wrapper>
       <div className="container">
         <div className="contact-container">
-          <div className="emailphone">
+          <div
+            className={inView ? "emailphone appear" : "emailphone"}
+            ref={ref}
+          >
             <div className="icon-bg">
               <FiMail className="icon" />
             </div>
@@ -16,14 +24,17 @@ const FooterNew = () => {
               mytokyowebdev@ernieryan.dev
             </a>
           </div>
-          <div className="emailphone">
+          <div
+            className={inView ? "emailphone appear" : "emailphone"}
+            ref={ref}
+          >
             <div className="icon-bg">
               <BsTelephone className="icon" />
             </div>
             <a href="tel:08075750507">+81 80-7575-0507</a>
           </div>
         </div>
-        <div className="sublinks">
+        <div className={inView ? "sublinks appear" : "sublinks"} ref={ref}>
           <div className="pages">
             <h4>PAGES</h4>
             <ul>
@@ -103,6 +114,7 @@ const Wrapper = styled.footer`
         align-items: center;
         position: relative;
         margin-bottom: 3rem;
+        transform: scaleY(0);
 
         a {
           font-size: 1.6rem;
@@ -140,6 +152,7 @@ const Wrapper = styled.footer`
     }
     .sublinks {
       display: flex;
+      transform: scaleY(0);
 
       h4 {
         font-size: 1.5rem;

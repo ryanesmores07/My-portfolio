@@ -1,11 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import { useInView } from "react-intersection-observer"
 
 const ServicesList = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  })
   return (
     <Wrapper>
-      <div className="container">
+      <div className={inView ? "container appear" : "container"} ref={ref}>
         <StaticImage
           className="photo"
           src="../assets/images/webdesign.png"
@@ -17,7 +22,7 @@ const ServicesList = () => {
           overviews. Iterative approaches to corporate
         </p>
       </div>
-      <div className="container">
+      <div className={inView ? "container appear" : "container"} ref={ref}>
         <StaticImage
           className="photo"
           src="../assets/images/shopify.png"
@@ -47,6 +52,7 @@ const Wrapper = styled.article`
     padding: 3rem 2rem;
     position: relative;
     transition: transform 200ms ease-out;
+    transform: scaleY(0);
 
     &:hover {
       transform: translateY(-1.5rem);

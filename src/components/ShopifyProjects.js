@@ -108,6 +108,10 @@ const Wrapper = styled.article`
       padding: 2rem;
       background-color: #1f1f1f;
       margin-bottom: 5rem;
+      transition: transform 200ms ease-out;
+      &:hover {
+        transform: translateY(-1.5rem);
+      }
     }
   }
 

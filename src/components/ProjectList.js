@@ -12,7 +12,7 @@ const ProjectList = ({ projects }) => {
           const { title, slug, description, image, github, url, content } =
             project
           return (
-            <div className="grid-item" key={index}>
+            <div className="grid-item " key={index}>
               <Link to={`/projects/${slug}`}>
                 <GatsbyImage
                   image={getImage(image)}

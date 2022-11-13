@@ -18,7 +18,7 @@ const HeroNew = () => {
           </p>
 
           <div className="btn-container appear-delay-4">
-            <Link className="btn" href="#">
+            <Link className="btn" href="/contact">
               Book a FREE Call
             </Link>
             <div className="icon-bg">
