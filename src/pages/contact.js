@@ -170,6 +170,7 @@ const Wrapper = styled.section`
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
         .styling {
           border-radius: 2px;
           padding: 1rem;

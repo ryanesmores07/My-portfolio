@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import { AiOutlineLeft } from "react-icons/ai"
+import { HiOutlineArrowRight } from "react-icons/hi"
 
 import Contact from "../../components/Contact"
 const ProjectTemplate = ({
@@ -44,9 +45,20 @@ const ProjectTemplate = ({
               <a href={github}>
                 <FaGithubSquare />
               </a>
-              <a href={url}>
+              <a href={url} target="_blank">
                 <FaShareSquare />
               </a>
+            </div>
+            <div className="button-container">
+              <a
+                href={url}
+                className="btn"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                {`Visit ${title} Website`}
+              </a>
+              <HiOutlineArrowRight className="arrow-1" />
             </div>
           </section>
         </div>
@@ -63,6 +75,31 @@ const Wrapper = styled.main`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .button-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    &:hover .btn {
+      color: #bd10c3;
+      transform: scale(1.01);
+    }
+
+    .btn {
+      font-weight: 500;
+      transition: transform 150ms ease-out;
+    }
+    .arrow-1 {
+      background: linear-gradient(to right, #bd10c3, #cd1590, #d2177e, #eb9fed);
+      border-radius: 50%;
+      color: white;
+      padding: 0.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
   .return-container {
     padding: 3rem 5rem 0;
@@ -103,62 +140,65 @@ const Wrapper = styled.main`
     .project-container {
       width: 80%;
 
-      .image {
-        box-shadow: var(--dark-shadow);
+      .project-links {
+      }
+    }
+    .image {
+      box-shadow: var(--dark-shadow);
+      position: relative;
+    }
+
+    .image::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(3deg, #fff 10%, #cd1590 70%, #d2177e 40%);
+      opacity: 0.85;
+      transition: var(--transition);
+    }
+
+    .image:hover::after {
+      opacity: 0;
+    }
+
+    .content {
+      padding: 3rem 2rem;
+      background-color: var(--clr-white);
+      box-shadow: var(--dark-shadow);
+      z-index: 5;
+
+      .title {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1rem;
+        font-weight: 900;
       }
 
-      .image::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(3deg, #fff 10%, #cd1590 70%, #d2177e 40%);
-        opacity: 0.85;
-        transition: var(--transition);
+      .description {
+        margin-bottom: 0.7rem;
+        color: black;
+        font-size: 1.6rem;
       }
 
-      .image:hover::after {
-        opacity: 0;
+      a {
+        margin-right: 1rem;
+        color: black;
+        font-size: 1.3rem;
       }
 
-      .content {
-        padding: 3rem 2rem;
-        background-color: var(--clr-white);
-        box-shadow: var(--dark-shadow);
-        z-index: 5;
-
-        .title {
-          text-transform: uppercase;
-          letter-spacing: 0.1rem;
-          margin-bottom: 1rem;
-          font-weight: 900;
-        }
-
-        .description {
-          margin-bottom: 0.7rem;
-          color: black;
-          font-size: 1.6rem;
-        }
-
-        a {
-          margin-right: 1rem;
-          color: black;
-          font-size: 1.3rem;
-        }
-
-        .stack span {
-          display: inline-block;
-          font-size: 1rem;
-          margin: 0 1rem 0 0;
-          padding: 0.5rem 1rem;
-          letter-spacing: 0.1rem;
-          text-transform: uppercase;
-          border-radius: 50rem;
-          color: black;
-          background-color: var(--clr-grey-10);
-        }
+      .stack span {
+        display: inline-block;
+        font-size: 1rem;
+        margin: 0 1rem 0 0;
+        padding: 0.5rem 1rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        border-radius: 50rem;
+        color: black;
+        background-color: var(--clr-grey-10);
       }
     }
   }
@@ -200,7 +240,7 @@ const Wrapper = styled.main`
       .project-container {
         .content {
           a {
-            font-size: 2rem;
+            font-size: 1.8rem;
           }
           .title {
           }
