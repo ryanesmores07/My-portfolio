@@ -21,7 +21,7 @@ const Contact = () => {
           </h1>
           <p className={inView ? "appear-delay-2" : ""} ref={ref}>
             I'm Ernie Ryan— a developer who works with startups looking to push
-            creative boundaries Working with startups
+            creative boundaries that propels your businesses to the next level!
           </p>
           <div
             className={
