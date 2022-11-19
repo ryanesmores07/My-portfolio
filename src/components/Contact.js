@@ -29,7 +29,7 @@ const Contact = () => {
             }
             ref={ref}
           >
-            <Link to="/contact">Book FREE Call</Link>
+            <Link to="/contact">Get in touch</Link>
             <div className="icon-bg">
               <HiOutlineArrowRight className="arrow" />
             </div>

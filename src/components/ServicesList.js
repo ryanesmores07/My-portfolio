@@ -13,25 +13,49 @@ const ServicesList = () => {
       <div className={inView ? "container appear" : "container"} ref={ref}>
         <StaticImage
           className="photo"
-          src="../assets/images/webdesign.png"
+          src="../assets/images/shopify.png"
           alt="my-photo"
         />
-        <h3>Website Design</h3>
+        <h3>Shopify Store Setups</h3>
         <p>
-          Leverage agile frameworks to provide a robust synopsis for high level
-          overviews. Iterative approaches to corporate
+          Build you a brand new fully functional Shopify store from scratch and
+          help you navigate through it.
         </p>
       </div>
       <div className={inView ? "container appear" : "container"} ref={ref}>
         <StaticImage
           className="photo"
-          src="../assets/images/shopify.png"
+          src="../assets/images/migrate.png"
           alt="my-photo"
         />
-        <h3>Shopify Development</h3>
+        <h3>Shopify Store Migrations</h3>
         <p>
-          Leverage agile frameworks to provide a robust synopsis for high level
-          overviews. Iterative approaches to corporate
+          Migrate your existing store from other platform and importing all your
+          products into Shopify making it a seamless migration.
+        </p>
+      </div>
+      <div className={inView ? "container appear" : "container"} ref={ref}>
+        <StaticImage
+          className="photo"
+          src="../assets/images/webdesign.png"
+          alt="my-photo"
+        />
+        <h3>Shopify Theme Customization</h3>
+        <p>
+          Will customize any Shopify theme of your choice and make it exactly
+          how you want it to look and feel.
+        </p>
+      </div>
+      <div className={inView ? "container appear" : "container"} ref={ref}>
+        <StaticImage
+          className="photo"
+          src="../assets/images/app.png"
+          alt="my-photo"
+        />
+        <h3>Shopify App Integration</h3>
+        <p>
+          Integrate any Shopify Apps of your liking to your store while
+          maintaining loading speed.
         </p>
       </div>
     </Wrapper>
@@ -53,12 +77,14 @@ const Wrapper = styled.article`
     position: relative;
     transition: transform 200ms ease-out;
     transform: scaleY(0);
+    max-width: 35rem;
+    height: 30rem;
 
     &:hover {
       transform: translateY(-1.5rem);
     }
-    &:nth-child(2) {
-      margin-bottom: 4rem;
+    &:nth-child(4) {
+      /* margin-bottom: 4rem; */
     }
     &::before {
       content: "";
@@ -85,6 +111,7 @@ const Wrapper = styled.article`
       font-size: 2.2rem;
       font-weight: 600;
       margin-bottom: 0;
+      height: 4rem;
     }
     p {
       color: var(--clr-grey-9);
@@ -92,15 +119,24 @@ const Wrapper = styled.article`
     }
   }
   @media (min-width: 768px) {
+    /* justify-content: center; */
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+
+    & > * {
+      flex-basis: 100%;
+    }
+
     .container {
-      height: 20%;
+      flex-wrap: wrap;
+      /* width: 50rem; */
     }
   }
   @media (min-width: 1164px) {
+    flex-wrap: nowrap;
     .container {
-      width: 30%;
+      width: 40rem;
+      height: 32rem;
     }
   }
   @media (min-width: 1440px) {

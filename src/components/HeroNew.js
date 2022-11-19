@@ -9,7 +9,7 @@ const HeroNew = () => {
     <Wrapper>
       <div className="container">
         <div className="text-container">
-          <h1 className="text-gradient appear">eCommerce Developer</h1>
+          <h1 className="text-gradient appear">Shopify Developer</h1>
           <h1 className="appear-delay-1">crafting products</h1>
           <h1 className="appear-delay-2">that people love</h1>
           <p className="appear-delay-3">
@@ -19,7 +19,7 @@ const HeroNew = () => {
 
           <div className="btn-container appear-delay-4">
             <Link className="btn" href="/contact">
-              Book a FREE Call
+              Get in touch
             </Link>
             <div className="icon-bg">
               <HiOutlineArrowRight className="arrow" />
@@ -208,6 +208,7 @@ const Wrapper = styled.header`
         /* width: 70%; */
         h1 {
           font-size: 7rem;
+          line-height: 1.3;
           font-weight: 900;
         }
         p {

@@ -176,6 +176,7 @@ const Wrapper = styled.section`
           padding: 1rem;
           border: 2px solid;
           background-color: black;
+          font-family: var(--ff-satoshi);
           color: white;
           border-style: hidden;
           outline: 0;
