@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import { AiOutlineLeft } from "react-icons/ai"
 import { Link } from "gatsby"
+import videoIntro from "../assets/video/stylemate.mp4"
 const Stylemate = () => {
   return (
     <Wrapper>
@@ -42,7 +43,21 @@ const Stylemate = () => {
             </li>
           </ul>
         </div>
+
         <div className="image-container">
+          <h3>WATCH VIDEO DEMO</h3>
+          <video
+            controls
+            width="100%"
+            style={{
+              marginBottom: "5rem",
+              maxWidth: "80rem",
+              cursor: "pointer",
+            }}
+          >
+            <source src={videoIntro} />
+          </video>
+
           <h3>Advanced Search and Filters</h3>
           <StaticImage
             className="photo"

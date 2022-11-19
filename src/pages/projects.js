@@ -14,7 +14,7 @@ const Projects = ({
     triggerOnce: true,
   })
 
-  const [shopify, setShopify] = useState(false)
+  const [shopify, setShopify] = useState(true)
 
   const showShopify = () => {
     setShopify(true)

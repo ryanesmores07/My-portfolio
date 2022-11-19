@@ -58,18 +58,18 @@ const FooterNew = () => {
           <div className="social-media">
             <h4>SOCIAL MEDIA</h4>
             <ul>
-              <li>
+              {/* <li>
                 <a href="https://twitter.com/">Twitter</a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="https://www.linkedin.com/feed/">LinkedIn</a>
-              </li>
+              </li> */}
               <li>
                 <a href="https://github.com/ryanesmores07">Github</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="https://www.facebook.com/">Facebook</a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
