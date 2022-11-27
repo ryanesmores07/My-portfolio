@@ -119,7 +119,6 @@ const Wrapper = styled.article`
     }
   }
   @media (min-width: 768px) {
-    /* justify-content: center; */
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -140,6 +139,8 @@ const Wrapper = styled.article`
     }
   }
   @media (min-width: 1440px) {
+    justify-content: center;
+    align-items: center;
     .container {
       max-width: 35rem;
     }
