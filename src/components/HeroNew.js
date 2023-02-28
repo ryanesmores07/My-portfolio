@@ -30,7 +30,7 @@ const HeroNew = () => {
         <div className="image-container appear">
           <StaticImage
             className="photo"
-            src="../assets/images/ryan2.jpg"
+            src="../assets/images/ryanmain.jpg"
             alt="my-photo"
             layout="constrained"
             loading="eager"
